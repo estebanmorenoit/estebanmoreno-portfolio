@@ -1,4 +1,4 @@
-name: Upload Website
+name: Copy website to S3 and invalidate CloudFront Distribution
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
     - main
 
 jobs:
-  deploy:
+  copy-website-to-s3-and-invalidate-cloudfront:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
