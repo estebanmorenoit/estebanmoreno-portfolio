@@ -13,8 +13,6 @@ jobs:
     - uses: jakejarvis/s3-sync-action@master
       with:
         args: --follow-symlinks --delete --exclude '.git/*'
-        role-to-assume: <arn:aws:iam::974262444728:role/github-connect-portfolio-update-role> #change to reflect your IAM role’s ARN
-        role-session-name: GitHub_to_AWS_via_FederatedOIDC
       env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
