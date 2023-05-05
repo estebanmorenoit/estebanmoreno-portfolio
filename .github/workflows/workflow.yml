@@ -9,6 +9,7 @@ jobs:
   copy-website-to-s3-and-invalidate-cloudfront:
     runs-on: ubuntu-latest
     steps:
+      # This action checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
       - name: checkout
         uses: actions/checkout@master
 
@@ -24,7 +25,7 @@ jobs:
           AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
           SOURCE_DIR: './ '      # optional: defaults to entire repository
 
-      # Invalidate CloudFront (this action)
+      # Invalidate CloudFront Distribution
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v2
         env:
