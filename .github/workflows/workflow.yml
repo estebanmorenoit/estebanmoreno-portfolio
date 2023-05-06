@@ -25,6 +25,9 @@ jobs:
           AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
           SOURCE_DIR: './ '      # optional: defaults to entire repository
 
+  invalidate-cloudfront-distribution:
+    runs-on: ubuntu-latest
+    steps:
       # Invalidate CloudFront Distribution
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v2
