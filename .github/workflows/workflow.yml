@@ -26,6 +26,7 @@ jobs:
           SOURCE_DIR: './ '      # optional: defaults to entire repository
 
   invalidate-cloudfront-distribution:
+    needs: copy-website-to-s3-and-invalidate-cloudfront
     runs-on: ubuntu-latest
     steps:
       # Invalidate CloudFront Distribution
