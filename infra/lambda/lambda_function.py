@@ -2,9 +2,9 @@ import json
 import boto3
 import os
 
-# Initialize dynamodb boto3 object
+# Initialize DynamoDB boto3 object
 dynamodb = boto3.resource('dynamodb')
-# Set dynamodb table name variable from env
+# Set DynamoDB table name variable from env
 ddbTableName = os.environ['databaseName']
 table = dynamodb.Table(ddbTableName)
 
@@ -12,35 +12,42 @@ table = dynamodb.Table(ddbTableName)
 def lambda_handler(event, context):
     try:
         # Try to update the item
-        ddbResponse = table.update_item(
+        table.update_item(
             Key={
-                'id': 'visitor_count'
+                'id': 'Visits'
             },
-            UpdateExpression='SET visitor_count = visitor_count + :value',
+            UpdateExpression='SET Visits = Visits + :value',
             ExpressionAttributeValues={
-                ':value':1
-            },
-            ReturnValues="UPDATED_NEW"
+                ':value': 1
+            }
         )
     except:
         # If the item doesn't exist, create it
         table.put_item(
             Item={
-                'id': 'visitor_count',
-                'visitor_count': 1
-            }
-        )
-        ddbResponse = table.get_item(
-            Key={
-                'id': 'visitor_count'
+                'id': 'Visits',
+                'Visits': 1
             }
         )
 
+    # Retrieve the updated item
+    ddbResponse = table.get_item(
+        Key={
+            'id': 'Visits'
+        }
+    )
     
-    # Format dynamodb response into variable
-    responseBody = json.dumps({"count": int(ddbResponse["Attributes"]["visitor_count"])})
+    # Access the item's attributes
+    item = ddbResponse.get('Item')
+    if item is not None:
+        visits = item.get('Visits', 0)
+    else:
+        visits = 0
+    
+    # Format the response body
+    responseBody = json.dumps({"count": int(visits)})
 
-    # Create api response object
+    # Create API response object
     apiResponse = {
         "isBase64Encoded": False,
         "statusCode": 200,
@@ -52,7 +59,5 @@ def lambda_handler(event, context):
         "body": responseBody
     }
 
-
-    # Return api response object
-     
+    # Return API response object
     return apiResponse

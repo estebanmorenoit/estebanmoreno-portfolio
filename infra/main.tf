@@ -50,11 +50,11 @@ resource "aws_iam_policy" "iam_policy_for_lambda" {
           "Effect" : "Allow"
         },
         {
-          "Effect" : "Allow"
+          "Effect" : "Allow",
           "Action" : [
-            "dynamodb:UpdateItem", "dynamodb:GetItem"
+            "dynamodb:UpdateItem", "dynamodb:GetItem", "dynamodb:PutItem"
           ]
-          "Resource" : "arn:aws:dynamodb:eu-west-2:974262444728:table/VisitorsTable"
+          "Resource" : "arn:aws:dynamodb:eu-west-2:974262444728:table/visitor_count_ddb"
         },
       ]
   })
@@ -80,7 +80,7 @@ resource "aws_lambda_function" "terraform_lambda_func" {
   depends_on    = [aws_iam_role_policy_attachment.attach_iam_policy_to_iam_role]
   environment {
     variables = {
-      databaseName = "VisitorsTable"
+      databaseName = "visitor_count_ddb"
     }
   }
 }
@@ -93,7 +93,7 @@ resource "aws_cloudwatch_log_group" "api_gw" {
 resource "aws_apigatewayv2_api" "lambda" {
   name          = "visitor_count_CRC"
   protocol_type = "HTTP"
-  description = "Visitor count for Cloud Resume Challenge"
+  description   = "Visitor count for Cloud Resume Challenge"
   cors_configuration {
     allow_origins = ["https://estebanmoreno.link", "https://www.estebanmoreno.link"]
   }
@@ -146,4 +146,46 @@ resource "aws_lambda_permission" "api_gw" {
   principal     = "apigateway.amazonaws.com"
 
   source_arn = "${aws_apigatewayv2_api.lambda.execution_arn}/*/*"
+}
+
+resource "aws_dynamodb_table" "visitor_count_ddb" {
+  name           = "visitor_count_ddb"
+  billing_mode   = "PROVISIONED"
+  read_capacity  = 20
+  write_capacity = 20
+  hash_key       = "id"
+
+  attribute {
+    name = "id"
+    type = "S"
+  }
+
+  attribute {
+    name = "visitor_count"
+    type = "N"
+  }
+
+  global_secondary_index {
+    name            = "visitor_count_index"
+    hash_key        = "visitor_count"
+    projection_type = "ALL"
+    read_capacity   = 10
+    write_capacity  = 10
+  }
+
+  tags = {
+    Name = "Cloud Resume Challenge"
+  }
+}
+
+resource "aws_dynamodb_table_item" "visitor_count_ddb" {
+  table_name = aws_dynamodb_table.visitor_count_ddb.name
+  hash_key   = aws_dynamodb_table.visitor_count_ddb.hash_key
+
+  item = <<ITEM
+{
+  "id": {"S": "Visits"},
+  "visitor_count": {"N": "1"}
+}
+ITEM
 }
