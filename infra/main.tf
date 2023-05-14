@@ -122,6 +122,10 @@ resource "aws_apigatewayv2_stage" "lambda" {
       }
     )
   }
+
+  tags = {
+    Name = "Cloud Resume Challenge"
+  }
 }
 
 resource "aws_apigatewayv2_integration" "terraform_lambda_func" {
