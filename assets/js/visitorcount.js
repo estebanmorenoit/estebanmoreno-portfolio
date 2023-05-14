@@ -3,7 +3,6 @@ async function get_visitors() {
   // call post api request function
   //await post_visitor();
   try {
-    //      let response = await fetch('https://cv6b7x3ici.execute-api.eu-west-2.amazonaws.com/default/VisitorCounter', {
     let response = await fetch(
       "https://wnzlilnzu6.execute-api.eu-west-2.amazonaws.com/default/terraform_lambda_func",
       {
