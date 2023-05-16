@@ -54,7 +54,9 @@ resource "aws_iam_policy" "iam_policy_for_lambda" {
         {
           "Effect" : "Allow",
           "Action" : [
-            "dynamodb:UpdateItem", "dynamodb:GetItem", "dynamodb:PutItem"
+            "dynamodb:UpdateItem", 
+            "dynamodb:GetItem", 
+            "dynamodb:PutItem"
           ],
           "Resource" : "arn:aws:dynamodb:eu-west-2:974262444728:table/visitor_count_ddb"
         },
