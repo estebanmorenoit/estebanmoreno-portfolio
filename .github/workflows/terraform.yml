@@ -29,6 +29,23 @@ jobs:
           terraform fmt  # Format the Terraform configuration
           terraform init -upgrade  # Initialize Terraform and upgrade modules if available
 
+      - name: Terraform Import Existing Resources # Import existing resources to Terraform state
+        if: ${{ github.ref == 'refs/heads/main' }} # Only run on main branch push
+        run: |
+          cd infra/
+          terraform import aws_iam_role.lambda_role terraform_lambda_func_Role
+          terraform import aws_iam_policy.iam_policy_for_lambda aws_iam_policy_for_terraform_lambda_func_role
+          terraform import aws_iam_role_policy_attachment.attach_iam_policy_to_iam_role aws_iam_role.lambda_role/terraform_lambda_func_Role
+          terraform import aws_lambda_function.terraform_lambda_func terraform_lambda_func
+          terraform import aws_cloudwatch_log_group.api_gw visitor_count_log_group
+          terraform import aws_apigatewayv2_api.lambda visitor_count_CRC
+          terraform import aws_apigatewayv2_stage.lambda visitor_count_CRC/default
+          terraform import aws_apigatewayv2_integration.terraform_lambda_func <api_gateway_integration_id>
+          terraform import aws_apigatewayv2_route.terraform_lambda_func visitor_count_CRC/ANY /terraform_lambda_func
+          terraform import aws_lambda_permission.api_gw terraform_lambda_func-AllowExecutionFromAPIGateway
+          terraform import aws_dynamodb_table.visitor_count_ddb visitor_count_ddb
+          terraform import aws_dynamodb_table_item.visitor_count_ddb visitor_count_ddb/Visits
+
       - name: Terraform Plan # Generate Terraform execution plan
         id: plan
         run: |
@@ -39,4 +56,3 @@ jobs:
         run: |
           cd infra/
           terraform apply -auto-approve  # Apply Terraform changes using the generated plan
- 
