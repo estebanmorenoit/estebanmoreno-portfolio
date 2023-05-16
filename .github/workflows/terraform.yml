@@ -36,7 +36,11 @@ jobs:
           terraform plan -input=false -out=tfplan  # Generate a plan and save it as 'tfplan' file
 
       - name: Terraform Apply # Apply the Terraform configuration
-        if: exists('infra/tfplan') # Condition to check if the 'tfplan' file exists
         run: |
           cd infra/
           terraform apply -auto-approve  # Apply Terraform changes using the generated plan
+
+      - name: Terraform Destroy # Apply the Terraform configuration
+        run: |
+          cd infra/
+          terraform destroy  # Destroy Terraform changes using the generated plan
