@@ -16,8 +16,11 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # Set AWS secret access key from secrets
 
     steps:
-      - uses: actions/checkout@v2  # Checkout the repository to the GitHub Actions runner
-
+      - name: Checkout
+        uses: actions/checkout@v2  # Checkout the repository to the GitHub Actions runner
+        with:
+          path: infra
+          
       - name: Setup Terraform  # Use the 'hashicorp/setup-terraform' action to set up Terraform
         uses: hashicorp/setup-terraform@v2
 
