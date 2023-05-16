@@ -12,32 +12,30 @@ jobs:
   TerraformDeploy:
     runs-on: ubuntu-latest
     env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}  # Set AWS access key ID from secrets
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # Set AWS secret access key from secrets
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} # Set AWS access key ID from secrets
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # Set AWS secret access key from secrets
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2  # Checkout the repository to the GitHub Actions runner
+        uses: actions/checkout@v2 # Checkout the repository to the GitHub Actions runner
 
-      - name: Setup Terraform  # Use the 'hashicorp/setup-terraform' action to set up Terraform
+      - name: Setup Terraform # Use the 'hashicorp/setup-terraform' action to set up Terraform
         uses: hashicorp/setup-terraform@v2
 
-      - name: Terraform Init  # Initialize Terraform and format the configuration
+      - name: Terraform Init # Initialize Terraform and format the configuration
         id: init
         run: |
           cd infra/
           terraform fmt  # Format the Terraform configuration
           terraform init -upgrade  # Initialize Terraform and upgrade modules if available
 
-      - name: Terraform Plan  # Generate Terraform execution plan
+      - name: Terraform Plan # Generate Terraform execution plan
         id: plan
         run: |
           cd infra/
           terraform plan -input=false -out=tfplan  # Generate a plan and save it as 'tfplan' file
 
-      - name: Terraform Apply  # Apply the Terraform configuration
+      - name: Terraform Apply # Apply the Terraform configuration
         run: |
           cd infra/
-          terraform apply -auto-approve        # Apply Terraform changes using the generated plan
-        
-
+          terraform apply -auto-approve # Apply Terraform changes using the generated plan
