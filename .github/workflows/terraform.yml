@@ -18,9 +18,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2  # Checkout the repository to the GitHub Actions runner
-        
-      - name: Change to 'infra' directory # Change to the 'infra' directory
-        run: cd infra
 
       - name: Setup Terraform  # Use the 'hashicorp/setup-terraform' action to set up Terraform
         uses: hashicorp/setup-terraform@v2
@@ -28,17 +25,18 @@ jobs:
       - name: Terraform Init  # Initialize Terraform and format the configuration
         id: init
         run: |
-          cd terraform/
+          cd infra/
           terraform fmt  # Format the Terraform configuration
           terraform init -upgrade  # Initialize Terraform and upgrade modules if available
 
       - name: Terraform Plan  # Generate Terraform execution plan
         id: plan
         run: |
-          cd terraform/
+          cd infra/
           terraform plan -input=false -out=tfplan  # Generate a plan and save it as 'tfplan' file
 
       - name: Terraform Apply  # Apply the Terraform configuration
-        run: terraform apply -auto-approve        # Apply Terraform changes using the generated plan
+        run: |
+          cd infra/terraform apply -auto-approve        # Apply Terraform changes using the generated plan
         
 
