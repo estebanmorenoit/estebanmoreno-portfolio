@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2  # Checkout the repository to the GitHub Actions runner
         with:
           path: infra
-          
+
       - name: Setup Terraform  # Use the 'hashicorp/setup-terraform' action to set up Terraform
         uses: hashicorp/setup-terraform@v2
 
@@ -35,6 +35,6 @@ jobs:
         run: terraform plan -input=false -out=tfplan  # Generate a plan and save it as 'tfplan' file
 
       - name: Terraform Apply  # Apply the Terraform configuration
-        run: terraform apply -auto-approve -replace=tfplan        # Apply Terraform changes using the generated plan
+        run: terraform apply -auto-approve        # Apply Terraform changes using the generated plan
         
 
