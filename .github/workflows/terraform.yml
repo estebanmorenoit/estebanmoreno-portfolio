@@ -32,6 +32,6 @@ jobs:
         run: terraform plan -input=false -out=tfplan  # Generate a plan and save it as 'tfplan' file
 
       - name: Terraform Apply  # Apply the Terraform configuration
-        run: terraform apply -auto-approve tfplan  # Apply Terraform changes using the generated plan
+        run: terraform apply -auto-approve -replace=tfplan        # Apply Terraform changes using the generated plan
         
 
