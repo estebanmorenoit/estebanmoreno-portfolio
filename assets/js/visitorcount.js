@@ -4,7 +4,7 @@ async function get_visitors() {
   //await post_visitor();
   try {
     let response = await fetch(
-      "https://fkjggvd3ce.execute-api.eu-west-2.amazonaws.com/default/terraform_lambda_func",
+      "https://qfky693v2f.execute-api.eu-west-2.amazonaws.com/default/terraform_lambda_func",
       {
         method: "GET",
       }
