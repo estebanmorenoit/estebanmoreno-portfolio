@@ -1,4 +1,4 @@
-name: "terraform-deploy"
+name: "terraform-deployment"
 
 on:
   push:
@@ -11,6 +11,9 @@ on:
 jobs:
   TerraformDeploy:
     runs-on: ubuntu-latest
+    env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}  # Set AWS access key ID from secrets
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # Set AWS secret access key from secrets
 
     steps:
       - uses: actions/checkout@v2  # Checkout the repository to the GitHub Actions runner
@@ -30,7 +33,5 @@ jobs:
 
       - name: Terraform Apply  # Apply the Terraform configuration
         run: terraform apply -auto-approve tfplan  # Apply Terraform changes using the generated plan
-        env:
-            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}  # Set AWS access key ID from secrets
-            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # Set AWS secret access key from secrets
+        
 
