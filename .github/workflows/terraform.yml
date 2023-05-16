@@ -18,8 +18,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2  # Checkout the repository to the GitHub Actions runner
-        with:
-          path: infra
+        
+      - name: Change to 'infra' directory # Change to the 'infra' directory
+        run: cd infra
 
       - name: Setup Terraform  # Use the 'hashicorp/setup-terraform' action to set up Terraform
         uses: hashicorp/setup-terraform@v2
