@@ -28,12 +28,15 @@ jobs:
       - name: Terraform Init  # Initialize Terraform and format the configuration
         id: init
         run: |
+          cd terraform/
           terraform fmt  # Format the Terraform configuration
           terraform init -upgrade  # Initialize Terraform and upgrade modules if available
 
       - name: Terraform Plan  # Generate Terraform execution plan
         id: plan
-        run: terraform plan -input=false -out=tfplan  # Generate a plan and save it as 'tfplan' file
+        run: |
+          cd terraform/
+          terraform plan -input=false -out=tfplan  # Generate a plan and save it as 'tfplan' file
 
       - name: Terraform Apply  # Apply the Terraform configuration
         run: terraform apply -auto-approve        # Apply Terraform changes using the generated plan
