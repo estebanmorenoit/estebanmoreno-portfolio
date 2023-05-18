@@ -12,7 +12,7 @@ env:
     TF_CLOUD_ORGANIZATION: "estebanmorenoit"
     TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
     TF_WORKSPACE: "estebanmoreno-portfolio"
-#    CONFIG_DIRECTORY: "./infra/"
+    CONFIG_DIRECTORY: "./infra/"
 
 jobs:
     terraform:
@@ -25,6 +25,11 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v3
+              with:
+                path: infra
+
+            - name: Set Working Directory
+              run: cd infra
 
             - name: Upload Configuration
               uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.0
