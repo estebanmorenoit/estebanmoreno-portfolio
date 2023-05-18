@@ -25,15 +25,10 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v3
-              with:
-                path: infra
-
-            - name: Set Working Directory
-              run: cd infra
 
             - name: Upload Configuration
               uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.0
-              id: plan-upload
+              id: upload
               with:
                 workspace: ${{ env.TF_WORKSPACE }}
                 directory: ${{ env.CONFIG_DIRECTORY }}
