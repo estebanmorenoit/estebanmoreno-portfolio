@@ -12,7 +12,7 @@ env:
     TF_CLOUD_ORGANIZATION: "estebanmorenoit"
     TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
     TF_WORKSPACE: "estebanmoreno-portfolio"
-    CONFIG_DIRECTORY: "./infra/"
+#    CONFIG_DIRECTORY: "./infra/"
 
 jobs:
     terraform:
