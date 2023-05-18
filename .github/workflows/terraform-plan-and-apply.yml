@@ -68,12 +68,13 @@ jobs:
 
             - name: Check Existing Infrastructure
               run: |
-                  terraform init ${{ env.CONFIG_DIRECTORY }}
-                  terraform workspace select ${{ env.TF_WORKSPACE }}
-                  terraform state show aws_apigatewayv2_api.lambda || echo "API Gateway API doesn't exist"
-                  terraform state show aws_lambda_function.terraform_lambda_func || echo "Lambda function doesn't exist"
-                  terraform state show aws_cloudwatch_log_group.api_gw || echo "CloudWatch Log Group doesn't exist"
-                  # Add similar lines for other resources you want to check
+                terraform -chdir=${{ env.CONFIG_DIRECTORY }} init
+                terraform -chdir=${{ env.CONFIG_DIRECTORY }} workspace select ${{ env.TF_WORKSPACE }}
+                terraform -chdir=${{ env.CONFIG_DIRECTORY }} state show aws_apigatewayv2_api.lambda || echo "API Gateway API doesn't exist"
+                terraform -chdir=${{ env.CONFIG_DIRECTORY }} state show aws_lambda_function.terraform_lambda_func || echo "Lambda function doesn't exist"
+                terraform -chdir=${{ env.CONFIG_DIRECTORY }} state show aws_cloudwatch_log_group.api_gw || echo "CloudWatch Log Group doesn't exist"
+                # Add similar lines for other resources you want to check
+              
 
             - name: Create Apply Run
               uses: hashicorp/tfc-workflows-github/actions/create-run@v1.0.0
