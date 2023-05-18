@@ -66,8 +66,8 @@ jobs:
                 workspace: ${{ env.TF_WORKSPACE }}
                 directory: ${{ env.CONFIG_DIRECTORY }}
 
-             - name: Check Existing Infrastructure
-               run: |
+            - name: Check Existing Infrastructure
+              run: |
                   terraform init ${{ env.CONFIG_DIRECTORY }}
                   terraform workspace select ${{ env.TF_WORKSPACE }}
                   terraform state show aws_apigatewayv2_api.lambda || echo "API Gateway API doesn't exist"
