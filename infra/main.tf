@@ -10,8 +10,8 @@ terraform {
 }
 
 provider "aws" {
-  region  = "eu-west-2"
-#  profile = "default"
+  region = "eu-west-2"
+  #  profile = "default"
 }
 
 # IAM Role for Lambda function
@@ -54,8 +54,8 @@ resource "aws_iam_policy" "iam_policy_for_lambda" {
         {
           "Effect" : "Allow",
           "Action" : [
-            "dynamodb:UpdateItem", 
-            "dynamodb:GetItem", 
+            "dynamodb:UpdateItem",
+            "dynamodb:GetItem",
             "dynamodb:PutItem"
           ],
           "Resource" : "arn:aws:dynamodb:eu-west-2:974262444728:table/visitor_count_ddb"
@@ -203,4 +203,7 @@ resource "aws_dynamodb_table_item" "visitor_count_ddb" {
   "visitor_count": {"N": "1"}
 }
 ITEM
+  lifecycle {
+    ignore_changes = all
+  }
 }
