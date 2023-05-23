@@ -41,7 +41,7 @@
     <a href="https://github.com/estebanmorenoit/estebanmoreno-portfolio"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/estebanmorenoit/estebanmoreno-portfolio">View Demo</a>
+    <a href="https://estebanmoreno.link">View Demo</a>
     ·
     <a href="https://github.com/estebanmorenoit/estebanmoreno-portfolio/issues">Report Bug</a>
     ·
