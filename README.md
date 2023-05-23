@@ -148,9 +148,9 @@ Project Link: [https://github.com/estebanmorenoit/estebanmoreno-portfolio](https
 [forks-shield]: https://img.shields.io/github/forks/estebanmorenoit/estebanmoreno-portfolio.svg?style=for-the-badge
 [forks-url]: https://github.com/estebanmorenoit/estebanmoreno-portfolio/network/members
 [stars-shield]: https://img.shields.io/github/stars/estebanmorenoit/estebanmoreno-portfolio.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
+[stars-url]: https://github.com/estebanmorenoit/estebanmoreno-portfolio/stargazers
 [issues-shield]: https://img.shields.io/github/issues/estebanmorenoit/estebanmoreno-portfolio.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
+[issues-url]: https://github.com/estebanmorenoit/estebanmoreno-portfolio/issues
 [license-shield]: https://img.shields.io/github/license/estebanmorenoit/estebanmoreno-portfolio.svg?style=for-the-badge
 [license-url]: https://github.com/estebanmorenoit/estebanmoreno-portfolio/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
