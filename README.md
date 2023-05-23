@@ -88,8 +88,10 @@ The Cloud Resume Challenge is a project designed to enhance AWS skills and showc
 * ![CSS-3][CSS-3]
 * ![Javascript][Javascript]
 * ![Python][Python]
+* ![AWS][AWS]
 * ![Terraform][Terraform]
 * ![GithubAction][GithubActions]
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -177,3 +179,4 @@ Project Link: [https://github.com/estebanmorenoit/estebanmoreno-portfolio](https
 [Javascript]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
 [GithubActions]: https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white
 [HTML]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
+[AWS]: https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white
