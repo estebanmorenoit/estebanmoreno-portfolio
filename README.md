@@ -41,7 +41,7 @@
     <a href="https://github.com/estebanmorenoit/estebanmoreno-portfolio"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/estebanmorenoit/estebanmoreno-portfolio">View Demo</a>
+    <a href="https://estebanmoreno.link">View Demo</a>
     ·
     <a href="https://github.com/estebanmorenoit/estebanmoreno-portfolio/issues">Report Bug</a>
     ·
@@ -74,7 +74,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://estebanmoreno.link)
 
 The Cloud Resume Challenge is a project designed to enhance AWS skills and showcase expertise in cloud computing, infrastructure management, and automation. By building and deploying a personalized website using various AWS services and DevOps practices, participants demonstrate their ability to create scalable and efficient solutions. The challenge aims to achieve practical experience in cloud technologies while showcasing skills to potential employers or collaborators.
 
@@ -84,14 +84,15 @@ The Cloud Resume Challenge is a project designed to enhance AWS skills and showc
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* ![HTML][HTML]
+* ![CSS-3][CSS-3]
+* ![Javascript][Javascript]
+* ![Python][Python]
+* ![AWS][AWS]
+* ![Terraform][Terraform]
+* ![GithubAction][GithubActions]
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,18 +143,18 @@ Project Link: [https://github.com/estebanmorenoit/estebanmoreno-portfolio](https
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/estebanmorenoit/estebanmoreno-portfolio.svg?style=for-the-badge
+[contributors-url]: https://github.com/estebanmorenoit/estebanmoreno-portfolio/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/estebanmorenoit/estebanmoreno-portfolio.svg?style=for-the-badge
+[forks-url]: https://github.com/estebanmorenoit/estebanmoreno-portfolio/network/members
+[stars-shield]: https://img.shields.io/github/stars/estebanmorenoit/estebanmoreno-portfolio.svg?style=for-the-badge
+[stars-url]: https://github.com/estebanmorenoit/estebanmoreno-portfolio/stargazers
+[issues-shield]: https://img.shields.io/github/issues/estebanmorenoit/estebanmoreno-portfolio.svg?style=for-the-badge
+[issues-url]: https://github.com/estebanmorenoit/estebanmoreno-portfolio/issues
+[license-shield]: https://img.shields.io/github/license/estebanmorenoit/estebanmoreno-portfolio.svg?style=for-the-badge
+[license-url]: https://github.com/estebanmorenoit/estebanmoreno-portfolio/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://www.linkedin.com/in/estebanmorenoramirez/
 [product-screenshot]: /images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
@@ -171,3 +172,11 @@ Project Link: [https://github.com/estebanmorenoit/estebanmoreno-portfolio](https
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[Terraform]: https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white
+[Terraform-url]: https://www.terraform.io/
+[CSS-3]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
+[Python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+[Javascript]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
+[GithubActions]: https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white
+[HTML]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
+[AWS]: https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white
