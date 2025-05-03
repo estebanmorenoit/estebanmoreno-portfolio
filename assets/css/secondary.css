@@ -157,14 +157,25 @@
   margin-left: 0;
 }
 
+.cert-badges-grid li {
+  border: none;
+  box-shadow: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 .cert-badges-grid img {
   max-width: 100%;
   height: auto;
+  display: block;
   transition: transform 0.2s ease;
 }
+
 .cert-badges-grid img:hover {
   transform: scale(1.05);
 }
+
 
 #goTopBtn {
   position: fixed;
