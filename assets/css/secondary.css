@@ -144,3 +144,24 @@
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   margin: 1rem 0 0.75rem;
 }
+
+.cert-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+}
+
+.cert-badges-grid img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+.cert-badges-grid img:hover {
+  transform: scale(1.05);
+}
