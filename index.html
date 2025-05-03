@@ -2,19 +2,27 @@
 <html lang="en">
     <head>
         <title>Esteban Moreno | DevOps Engineer Portfolio</title>
+
+        <!-- Basic Meta Tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta name="description" content="Esteban Moreno's portfolio showcasing cloud and DevOps projects." />
         <meta name="keywords" content="Esteban Moreno, Cloud, DevOps, Portfolio, AWS, Docker, CI/CD, Terraform, Linux" />
+
+        <!-- Open Graph (Facebook, LinkedIn, etc.) -->
         <meta property="og:title" content="Esteban Moreno – DevOps Portfolio" />
         <meta property="og:description" content="Portfolio showcasing DevOps projects using AWS, Terraform, Kubernetes, and more." />
         <meta property="og:image" content="https://estebanmoreno.link/images/Cloud%20Resume%20Challenge%20Cover.png" />
         <meta property="og:url" content="https://estebanmoreno.link" />
         <meta property="og:type" content="website" />
+
+        <!-- Twitter Card Metadata -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Esteban Moreno – DevOps Engineer Portfolio" />
         <meta name="twitter:description" content="Portfolio showcasing DevOps projects using AWS, Terraform, Kubernetes, and more." />
         <meta name="twitter:image" content="https://estebanmoreno.link/images/Cloud%20Resume%20Challenge%20Cover.png" />
+
+        <!-- Structured Data (JSON-LD for search engines) -->
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -25,18 +33,32 @@
                 "url": "https://estebanmoreno.link"
             }
         </script>
+
+        <!-- Canonical URL -->
         <link rel="canonical" href="https://estebanmoreno.link/" />
+
+        <!-- Stylesheets -->
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/secondary.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <!-- Google tag (gtag.js) -->
+        <noscript>
+            <link rel="stylesheet" href="assets/css/noscript.css" />
+        </noscript>
+
+        <!-- Favicons for various platforms -->
+        <link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png" />
+        <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg" />
+        <link rel="shortcut icon" href="images/icons/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png" />
+
+        <!-- Progressive Web App (PWA) Support -->
+        <link rel="manifest" href="images/icons/site.webmanifest" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="apple-mobile-web-app-title" content="Esteban Moreno | DevOps Engineer Portfolio" />
+
+        <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-J793YCB66V"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -44,7 +66,6 @@
                 dataLayer.push(arguments);
             }
             gtag("js", new Date());
-
             gtag("config", "G-J793YCB66V");
         </script>
     </head>
@@ -85,56 +106,59 @@
                 <!-- Intro -->
                 <article id="intro" aria-labelledby="intro-heading">
                     <section class="aboutMe">
-                      <h1 id="intro-heading" class="major">Intro</h1>
-                  
-                      <p>
-                        I am a DevOps Engineer with experience in AWS, Kubernetes, Terraform, CI/CD, observability, and automation. I work on building scalable, reliable infrastructure and optimizing workflows to improve efficiency. Comfortable tackling complex challenges and delivering practical solutions in fast-paced environments.
-                      </p>
-                      <p>
-                        During my tenure at X-Tention, I have worked on automating cloud infrastructure, optimizing Kubernetes deployments, and improving system observability. I also contribute to CI/CD pipelines to streamline software delivery while keeping security and compliance in check.
-                      </p>
-                      <p>
-                        Committed to continuous learning and improvement, I focus on automation, infrastructure as code, and monitoring. Adaptability, clear communication, and a problem-solving mindset enable me to contribute effectively to projects and keep things running smoothly.
-                      </p>
-                  
-                      <section class="certifications">
-                        <h2>Certifications</h2>
-                        <p><i>Verify with Credly (Click badge)</i></p>
-                        <ul class="cert-badges-grid">
-                          <li>
-                            <a href="https://www.credly.com/badges/ac68a736-3d05-45d0-8181-e34d0df00f2e" target="_blank" rel="noopener" aria-label="AWS Certified Cloud Practitioner Badge">
-                              <img src="images/credly1.png" alt="AWS Certified Cloud Practitioner Badge" loading="lazy" />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.credly.com/badges/40bd01b9-e41d-46b2-a4ce-b8727bc908fc" target="_blank" rel="noopener" aria-label="AWS Certified Solutions Architect - Associate Badge">
-                              <img src="images/credly2.png" alt="AWS Certified Solutions Architect - Associate Badge" loading="lazy" />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.credly.com/badges/982d68cb-d058-4d10-9940-8f47230c9eda/public_url" target="_blank" rel="noopener" aria-label="LPI Linux Essentials Badge">
-                              <img src="images/LPI.png" alt="LPI Linux Essentials Badge" loading="lazy" />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://app.exampro.co/student/achievements/validate/badge/euKUYzM44I4IpuJV7mEXGg1a90b" target="_blank" rel="noopener" aria-label="Terraform Beginner Bootcamp Badge">
-                              <img src="images/terraform-beginner-bootcamp.png" alt="Terraform Beginner Bootcamp Badge" loading="lazy" />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.credly.com/badges/7e8c04a3-a51e-43ad-85f4-697a509dee86" target="_blank" rel="noopener" aria-label="Cisco Certified Network Associate Badge">
-                              <img src="images/cisco-network.png" alt="Cisco Certified Network Associate Badge" loading="lazy" />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.credly.com/badges/bbf86508-e3de-4998-818b-9ccf2884b492" target="_blank" rel="noopener" aria-label="Cisco Cybersecurity Essentials Badge">
-                              <img src="images/cisco-cybersecurity.png" alt="Cisco Cybersecurity Essentials Badge" loading="lazy" />
-                            </a>
-                          </li>
-                        </ul>
-                      </section>
+                        <h1 id="intro-heading" class="major">Intro</h1>
+
+                        <p>
+                            I am a DevOps Engineer with experience in AWS, Kubernetes, Terraform, CI/CD, observability, and automation. I work on building scalable, reliable infrastructure and optimizing workflows to improve efficiency.
+                            Comfortable tackling complex challenges and delivering practical solutions in fast-paced environments.
+                        </p>
+                        <p>
+                            During my tenure at X-Tention, I have worked on automating cloud infrastructure, optimizing Kubernetes deployments, and improving system observability. I also contribute to CI/CD pipelines to streamline software
+                            delivery while keeping security and compliance in check.
+                        </p>
+                        <p>
+                            Committed to continuous learning and improvement, I focus on automation, infrastructure as code, and monitoring. Adaptability, clear communication, and a problem-solving mindset enable me to contribute
+                            effectively to projects and keep things running smoothly.
+                        </p>
+
+                        <section class="certifications">
+                            <h2>Certifications</h2>
+                            <p><i>Verify with Credly (Click badge)</i></p>
+                            <ul class="cert-badges-grid">
+                                <li>
+                                    <a href="https://www.credly.com/badges/ac68a736-3d05-45d0-8181-e34d0df00f2e" target="_blank" rel="noopener" aria-label="AWS Certified Cloud Practitioner Badge">
+                                        <img src="images/credly1.png" alt="AWS Certified Cloud Practitioner Badge" loading="lazy" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.credly.com/badges/40bd01b9-e41d-46b2-a4ce-b8727bc908fc" target="_blank" rel="noopener" aria-label="AWS Certified Solutions Architect - Associate Badge">
+                                        <img src="images/credly2.png" alt="AWS Certified Solutions Architect - Associate Badge" loading="lazy" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.credly.com/badges/982d68cb-d058-4d10-9940-8f47230c9eda/public_url" target="_blank" rel="noopener" aria-label="LPI Linux Essentials Badge">
+                                        <img src="images/LPI.png" alt="LPI Linux Essentials Badge" loading="lazy" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://app.exampro.co/student/achievements/validate/badge/euKUYzM44I4IpuJV7mEXGg1a90b" target="_blank" rel="noopener" aria-label="Terraform Beginner Bootcamp Badge">
+                                        <img src="images/terraform-beginner-bootcamp.png" alt="Terraform Beginner Bootcamp Badge" loading="lazy" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.credly.com/badges/7e8c04a3-a51e-43ad-85f4-697a509dee86" target="_blank" rel="noopener" aria-label="Cisco Certified Network Associate Badge">
+                                        <img src="images/cisco-network.png" alt="Cisco Certified Network Associate Badge" loading="lazy" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.credly.com/badges/bbf86508-e3de-4998-818b-9ccf2884b492" target="_blank" rel="noopener" aria-label="Cisco Cybersecurity Essentials Badge">
+                                        <img src="images/cisco-cybersecurity.png" alt="Cisco Cybersecurity Essentials Badge" loading="lazy" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
                     </section>
-                  </article>
+                </article>
 
                 <!-- Portfolio -->
                 <article id="projects">
