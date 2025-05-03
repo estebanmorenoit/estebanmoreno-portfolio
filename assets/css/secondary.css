@@ -225,6 +225,17 @@
   transition: color 0.3s ease-in-out;
 }
 
+.visitor-count {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  font-weight: bold;
+  color: #00b894; /* or match your site's accent color */
+}
+
+.visitor-count.loaded {
+  opacity: 1;
+}
+
 
 
 
