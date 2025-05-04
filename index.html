@@ -3,61 +3,75 @@
     <head>
         <!-- Basic Meta Tags -->
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Esteban Moreno's portfolio showcasing cloud and DevOps projects." />
         <meta name="keywords" content="Esteban Moreno, Cloud, DevOps, Portfolio, AWS, Docker, CI/CD, Terraform, Linux" />
         <meta name="author" content="Esteban Moreno" />
         <meta name="robots" content="index, follow" />
-
+      
         <title>Esteban Moreno | DevOps Engineer Portfolio</title>
-
-        <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+      
+        <!-- Open Graph -->
         <meta property="og:title" content="Esteban Moreno – DevOps Portfolio" />
         <meta property="og:description" content="Portfolio showcasing DevOps projects using AWS, Terraform, Kubernetes, and more." />
         <meta property="og:image" content="https://estebanmoreno.link/images/Cloud%20Resume%20Challenge%20Cover.webp" />
         <meta property="og:url" content="https://estebanmoreno.link" />
         <meta property="og:type" content="website" />
-
-        <!-- Twitter Card Metadata -->
+      
+        <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Esteban Moreno – DevOps Engineer Portfolio" />
         <meta name="twitter:description" content="Portfolio showcasing DevOps projects using AWS, Terraform, Kubernetes, and more." />
         <meta name="twitter:image" content="https://estebanmoreno.link/images/Cloud%20Resume%20Challenge%20Cover.webp" />
-
-        <!-- Structured Data (JSON-LD for search engines) -->
+      
+        <!-- Structured Data -->
         <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "Person",
-                "name": "Esteban Moreno",
-                "jobTitle": "DevOps Engineer",
-                "email": "morenoramirezesteban@gmail.com",
-                "url": "https://estebanmoreno.link",
-                "sameAs": ["https://github.com/estebanmorenoit", "https://linkedin.com/in/estebanmorenoramirez", "https://blog.estebanmoreno.link"]
-            }
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Esteban Moreno",
+            "jobTitle": "DevOps Engineer",
+            "email": "morenoramirezesteban@gmail.com",
+            "url": "https://estebanmoreno.link",
+            "sameAs": [
+              "https://github.com/estebanmorenoit",
+              "https://linkedin.com/in/estebanmorenoramirez",
+              "https://blog.estebanmoreno.link"
+            ]
+          }
         </script>
-
-        <!-- Canonical URL -->
+      
+        <!-- Canonical + RSS -->
         <link rel="canonical" href="https://estebanmoreno.link/" />
-
-        <!-- RSS Feed Discovery -->
         <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://blog.estebanmoreno.link/rss.xml" />
-
-        <!-- Stylesheets -->
+      
+        <!-- Stylesheets (local first) -->
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/secondary.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-            integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
+      
+        <!-- Preload + Load Font Awesome -->
+        <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+              onload="this.onload=null;this.rel='stylesheet'"
+              integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+              crossorigin="anonymous" referrerpolicy="no-referrer" />
         <noscript>
-            <link rel="stylesheet" href="assets/css/noscript.css" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+                integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
         </noscript>
-
-        <!-- Favicons for various platforms -->
+      
+        <!-- Preload + Load Google Fonts -->
+        <link rel="preload" as="style"
+              href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600"
+              onload="this.onload=null;this.rel='stylesheet'" />
+        <noscript>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600" />
+        </noscript>
+      
+        <!-- Noscript fallback -->
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+      
+        <!-- Favicons -->
         <link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png" />
@@ -67,17 +81,16 @@
         <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-config" content="images/icons/browserconfig.xml" />
-
-        <!-- Progressive Web App (PWA) Support -->
+      
+        <!-- PWA -->
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="apple-mobile-web-app-title" content="Esteban Moreno | DevOps Engineer Portfolio" />
-
-        <!-- Preconnect to improve font load performance -->
+      
+        <!-- Font Preconnect -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600" rel="stylesheet" />
-    </head>
+      </head>
 
     <body class="is-preload">
         <div id="wrapper">
