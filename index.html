@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta name="description" content="Esteban Moreno's portfolio showcasing cloud and DevOps projects." />
         <meta name="keywords" content="Esteban Moreno, Cloud, DevOps, Portfolio, AWS, Docker, CI/CD, Terraform, Linux" />
+        <meta name="author" content="Esteban Moreno" />
 
         <!-- Open Graph (Facebook, LinkedIn, etc.) -->
         <meta property="og:title" content="Esteban Moreno – DevOps Portfolio" />
@@ -58,17 +59,6 @@
         <link rel="manifest" href="images/icons/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="apple-mobile-web-app-title" content="Esteban Moreno | DevOps Engineer Portfolio" />
-
-        <!-- Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J793YCB66V"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-            gtag("config", "G-J793YCB66V");
-        </script>
     </head>
 
     <body class="is-preload">
@@ -103,12 +93,11 @@
             </header>
 
             <!-- Main -->
-            <div id="main">
+            <main id="main">
                 <!-- Intro -->
                 <article id="intro" aria-labelledby="intro-heading">
                     <section class="aboutMe">
-                        <h1 id="intro-heading" class="major">Intro</h1>
-
+                        <h2 id="intro-heading" class="underlined-heading">Intro</h2>
                         <div class="introContent">
                             <!-- <img class="introPic-wrap" src="images/introPic.png" alt="Intro profile picture" /> -->
                             <p>
@@ -126,8 +115,8 @@
                         </div>
 
                         <section class="certifications">
-                            <h2>Certifications</h2>
-                            <p><i>Verify with Credly (Click badge)</i></p>
+                            <h3 class="underlined-heading">Certifications</h3>
+                            <p><i>Verify on Credly (click badge)</i></p>
                             <ul class="cert-badges-grid">
                                 <li>
                                     <a href="https://www.credly.com/badges/ac68a736-3d05-45d0-8181-e34d0df00f2e" target="_blank" rel="noopener" aria-label="AWS Certified Cloud Practitioner Badge">
@@ -165,9 +154,8 @@
                 </article>
 
                 <!-- Portfolio -->
-                <article id="projects">
-                    <h1 class="major">Projects</h1>
-                    <br />
+                <article id="projects" aria-labelledby="projects-heading">
+                    <h2 id="projects-heading" class="underlined-heading">Projects</h2>
                     <div class="container">
                         <div class="row">
                             <div class="topColumn">
@@ -177,7 +165,7 @@
                                         <div class="cardImageWrapper">
                                             <img
                                                 class="cardImg"
-                                                src="images/devops-hands-on-project---building-a-scalable-2-tier-architecture-in-aws-with-terraform-and-terraform-cloud-ci:cd.webp"
+                                                src="images/devops-hands-on-project---building-a-scalable-2-tier-architecture-in-aws-with-terraform-and-terraform-cloud-ci-cd.webp"
                                                 alt="DevOps Project - 2-Tier Architecture Using Terraform and Terraform Cloud"
                                             />
                                         </div>
@@ -316,8 +304,8 @@
                 </article>
 
                 <!-- Contact -->
-                <article id="contact">
-                    <h2 class="major">Contact</h2>
+                <article id="contact" aria-labelledby="contact-heading">
+                    <h2 id="contact-heading" class="underlined-heading">Contact</h2>
                     <form id="contact-form" method="POST" action="https://formspree.io/f/xgvkaylz">
                         <!-- Spam prevention -->
                         <input type="text" name="_honey" style="display: none;" />
@@ -345,7 +333,7 @@
                         </ul>
                     </form>
                 </article>
-            </div>
+            </main>
 
             <!-- Footer -->
             <footer id="footer">
@@ -374,5 +362,16 @@
         <button id="goTopBtn" title="Back to top" aria-label="Scroll to top">
             <i class="fas fa-chevron-up"></i>
         </button>
+
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J793YCB66V"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-J793YCB66V");
+        </script>
     </body>
 </html>

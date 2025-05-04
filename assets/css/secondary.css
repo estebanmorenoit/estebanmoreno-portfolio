@@ -258,3 +258,9 @@
 .visitor-count.loaded {
   opacity: 1;
 }
+
+.underlined-heading {
+  text-decoration: underline;
+  text-underline-offset: 6px; /* creates space between text and underline */
+  margin-bottom: 0.5rem; /* optional, adds space below */
+}
