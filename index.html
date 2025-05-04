@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Esteban Moreno | DevOps Engineer Portfolio</title>
-
         <!-- Basic Meta Tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta name="description" content="Esteban Moreno's portfolio showcasing cloud and DevOps projects." />
         <meta name="keywords" content="Esteban Moreno, Cloud, DevOps, Portfolio, AWS, Docker, CI/CD, Terraform, Linux" />
         <meta name="author" content="Esteban Moreno" />
+        <meta name="robots" content="index, follow" />
+
+        <title>Esteban Moreno | DevOps Engineer Portfolio</title>
 
         <!-- Open Graph (Facebook, LinkedIn, etc.) -->
         <meta property="og:title" content="Esteban Moreno – DevOps Portfolio" />
@@ -30,7 +31,7 @@
                 "@type": "Person",
                 "name": "Esteban Moreno",
                 "jobTitle": "DevOps Engineer",
-                "email": "mailto:morenoramirezesteban@gmail.com",
+                "email": "morenoramirezesteban@gmail.com",
                 "url": "https://estebanmoreno.link",
                 "sameAs": ["https://github.com/estebanmorenoit", "https://linkedin.com/in/estebanmorenoramirez", "https://blog.estebanmoreno.link"]
             }
@@ -39,10 +40,19 @@
         <!-- Canonical URL -->
         <link rel="canonical" href="https://estebanmoreno.link/" />
 
+        <!-- RSS Feed Discovery -->
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://blog.estebanmoreno.link/rss.xml" />
+
         <!-- Stylesheets -->
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/secondary.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+            integrity="sha512-7K9KtqR0YcM3pZ8XHtL8dx8GiCtsfdR+TfAy1vF+9sDNJ2nCdHJj6bKHNwDAF8kq1EKC3Uu4f+z1lZ04dljKkg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <noscript>
             <link rel="stylesheet" href="assets/css/noscript.css" />
         </noscript>
@@ -54,12 +64,18 @@
         <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg" />
         <link rel="shortcut icon" href="images/icons/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png" />
+        <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-config" content="images/icons/browserconfig.xml" />
 
         <!-- Progressive Web App (PWA) Support -->
         <link rel="manifest" href="images/icons/site.webmanifest" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="apple-mobile-web-app-title" content="Esteban Moreno | DevOps Engineer Portfolio" />
 
+        <!-- Preconnect to improve font load performance -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600" rel="stylesheet" />
     </head>
 
@@ -79,6 +95,11 @@
                             </li>
                             <li>
                                 <a href="mailto:morenoramirezesteban@gmail.com" class="icon far fa-envelope-open" title="Email"><span class="label">Email</span></a>
+                            </li>
+                            <li>
+                                <a href="https://blog.estebanmoreno.link/rss.xml" target="_blank" class="icon solid fa-rss" title="RSS Feed" aria-label="RSS Feed">
+                                    <span class="label">RSS</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -348,7 +369,7 @@
         </div>
 
         <!-- BG -->
-        <div id="bg"></div>
+        <div id="bg" aria-hidden="true"></div>
 
         <!-- Scripts -->
         <script src="assets/js/jquery.min.js" defer></script>
