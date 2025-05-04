@@ -6,7 +6,7 @@
   gap: 1.5rem;
   margin: 2rem 0;
   align-items: stretch;
-  padding: 8px; /* combined from .row and .row > .column */
+  padding: 8px;
 }
 
 /* Removed .row > .column — not needed if you don’t use a .column class elsewhere */
@@ -36,8 +36,6 @@
   justify-content: center;
   margin-top: 1rem;
 }
-
-/* .cardFooter is kept for future flexibility */
 
 .cardImageWrapper {
   width: 100%;
@@ -98,12 +96,17 @@
   padding: 0 1rem;
 }
 
-.introPic {
-  max-width: 200px;
-  max-height: 275px;
-  border-radius: 4px;
+/* Updated intro section for text wrapping */
+.introContent {
+  overflow: hidden;
+}
+
+.introPic-wrap {
   float: left;
-  margin-right: 10px;
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin: 0 1.5rem 1rem 0;
 }
 
 .aboutMe {
@@ -136,6 +139,16 @@
   .portfoliop {
     margin-left: 10px;
     text-indent: 20px;
+  }
+
+  .introPic-wrap {
+    float: none;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .introContent {
+    text-align: center;
   }
 }
 
@@ -176,7 +189,6 @@
   transform: scale(1.05);
 }
 
-
 #goTopBtn {
   position: fixed;
   bottom: 2rem;
@@ -206,7 +218,7 @@
 #goTopBtn i {
   font-size: 1.3rem;
   display: inline-block;
-  transform: translateY(1px); /* fine-tuning vertical alignment */
+  transform: translateY(1px);
 }
 
 #footer p:last-child {
@@ -240,14 +252,9 @@
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
   font-weight: bold;
-  color: #00b894; /* or match your site's accent color */
+  color: #00b894;
 }
 
 .visitor-count.loaded {
   opacity: 1;
 }
-
-
-
-
-
