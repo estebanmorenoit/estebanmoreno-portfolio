@@ -11,7 +11,7 @@ jobs:
     steps:
       # Checkout repository
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Minify HTML, CSS, and JS
       - name: Minify HTML, CSS, and JS files
