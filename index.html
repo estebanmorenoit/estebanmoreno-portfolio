@@ -5,8 +5,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Esteban Moreno's portfolio showcasing cloud and DevOps projects." />
-        <meta name="keywords" content="Esteban Moreno, Cloud, DevOps, Portfolio, AWS, Docker, CI/CD, Terraform, Linux" />
-        <meta name="author" content="Esteban Moreno" />
+<meta name="author" content="Esteban Moreno" />
         <meta name="robots" content="index, follow" />
 
         <title>Esteban Moreno | DevOps Engineer Portfolio</title>
@@ -68,11 +67,12 @@
         <!-- Font Preconnect (must come before the font request below) -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
 
         <!-- Preload + Load Google Fonts -->
-        <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600" onload="this.onload=null;this.rel='stylesheet'" />
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
         <noscript>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" />
         </noscript>
 
         <!-- Noscript fallback -->
@@ -95,22 +95,12 @@
         <meta name="theme-color" content="#ffffff" />
         <meta name="apple-mobile-web-app-title" content="Esteban Moreno | DevOps Engineer Portfolio" />
 
-        <!-- Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J793YCB66V"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-            gtag("config", "G-J793YCB66V");
-        </script>
-
         <!-- Google HTML Tag Verification -->
         <meta name="google-site-verification" content="K3SLI8BvS6dsixqLa-XHastet2V7kjJ_clpjxuuu29U" />
     </head>
 
     <body class="is-preload">
+        <a href="#main" class="skip-to-content">Skip to content</a>
         <div id="wrapper">
             <header id="header">
                 <div class="content">
@@ -221,7 +211,7 @@
                         <!-- Certifications -->
                         <div class="certifications">
                             <h3 class="underlined-heading">Certifications</h3>
-                            <p><i>Verify on Credly (click badge)</i></p>
+                            <p><em>Verify on Credly (click badge)</em></p>
                             <ul class="cert-badges-grid">
                                 <li>
                                     <a href="https://www.credly.com/badges/ac68a736-3d05-45d0-8181-e34d0df00f2e" target="_blank" rel="noopener noreferrer" aria-label="AWS Certified Cloud Practitioner Badge">
@@ -268,7 +258,7 @@
                                     <div class="cardContent">
                                         <h3 class="cardTitle">Portfolio Project - Cloud Resume Challenge</h3>
                                         <div class="cardImageWrapper">
-                                            <img class="cardImg" src="images/cloud-resume-challenge-cover.webp" alt="Cloud Resume Challenge" />
+                                            <img class="cardImg" src="images/cloud-resume-challenge-cover.webp" alt="Cloud Resume Challenge" loading="lazy" />
                                         </div>
                                         <p class="portfoliop">
                                             This project effectively highlights DevOps expertise by creating a portfolio using a serverless web app, AWS services, and a strong CI/CD pipeline.
@@ -290,7 +280,7 @@
                                     <div class="cardContent">
                                         <h3 class="cardTitle">DevOps Project - #90daysofdevops challenge</h3>
                                         <div class="cardImageWrapper">
-                                            <img class="cardImg" src="images/90daysofdevops-challenge.webp" alt="#90daysofdevops challenge" />
+                                            <img class="cardImg" src="images/90daysofdevops-challenge.webp" alt="#90daysofdevops challenge" loading="lazy" />
                                         </div>
                                         <p class="portfoliop">The #90DaysOfDevOps Challenge is a dedicated initiative aimed at promoting continuous learning and skill development in the field of DevOps over a 90-day period.</p>
                                         <hr class="cardDivider" />
@@ -314,6 +304,7 @@
                                                 class="cardImg"
                                                 src="images/devops-hands-on-project---building-a-scalable-2-tier-architecture-in-aws-with-terraform-and-terraform-cloud-ci-cd.webp"
                                                 alt="DevOps Project - 2-Tier Architecture Using Terraform and Terraform Cloud"
+                                                loading="lazy"
                                             />
                                         </div>
                                         <p class="portfoliop">
@@ -336,7 +327,7 @@
                                     <div class="cardContent">
                                         <h3 class="cardTitle">DevOps Project - Jenkins Declarative Pipeline</h3>
                                         <div class="cardImageWrapper">
-                                            <img class="cardImg" src="images/hands-on-project---jenkins-declarative-pipeline.webp" alt="Jenkins Declarative Pipeline" />
+                                            <img class="cardImg" src="images/hands-on-project---jenkins-declarative-pipeline.webp" alt="Jenkins Declarative Pipeline" loading="lazy" />
                                         </div>
                                         <p class="portfoliop">This project provides hands-on experience with Jenkins Declarative Pipeline, guiding you through its implementation for efficient CI/CD workflows.</p>
                                         <hr class="cardDivider" />
@@ -353,7 +344,7 @@
                                     <div class="cardContent">
                                         <h3 class="cardTitle">DevOps Project - CI/CD pipeline on AWS</h3>
                                         <div class="cardImageWrapper">
-                                            <img class="cardImg" src="images/devops-hands-on-project---cicd-pipeline-on-aws.webp" alt="DevOps Project - CI/CD Pipeline on AWS" />
+                                            <img class="cardImg" src="images/devops-hands-on-project---cicd-pipeline-on-aws.webp" alt="DevOps Project - CI/CD Pipeline on AWS" loading="lazy" />
                                         </div>
                                         <p class="portfoliop">This project offers a hands-on experience in building and optimizing a robust CI/CD pipeline on AWS, ensuring efficient application deployment.</p>
                                         <hr class="cardDivider" />
@@ -370,7 +361,7 @@
                                     <div class="cardContent">
                                         <h3 class="cardTitle">Hybrid Directory between AWS and On-Premises</h3>
                                         <div class="cardImageWrapper">
-                                            <img class="cardImg" src="images/hands-on-labs-hybrid-directory-between-aws-and-simulated-on-premises.webp" alt="Hybrid Directory between AWS and On-Premises" />
+                                            <img class="cardImg" src="images/hands-on-labs-hybrid-directory-between-aws-and-simulated-on-premises.webp" alt="Hybrid Directory between AWS and On-Premises" loading="lazy" />
                                         </div>
                                         <p class="portfoliop">
                                             Discover a streamlined guide for integrating on-premises infrastructure with AWS seamlessly. From initial setup to creating Workspaces, ensure efficient connectivity at every stage.
@@ -389,7 +380,7 @@
                                     <div class="cardContent">
                                         <h3 class="cardTitle">DevOps Project - Deploy Netflix Clone on Kubernetes</h3>
                                         <div class="cardImageWrapper">
-                                            <img class="cardImg" src="images/devops-hands-on-project---deploying-a-netflix-clone-web-application-on-a-kubernetes-cluster-.webp" alt="DevOps Project - Deploy Netflix Clone on Kubernetes" />
+                                            <img class="cardImg" src="images/devops-hands-on-project---deploying-a-netflix-clone-web-application-on-a-kubernetes-cluster-.webp" alt="DevOps Project - Deploy Netflix Clone on Kubernetes" loading="lazy" />
                                         </div>
                                         <p class="portfoliop">This project provides a hands-on opportunity to deploy a Netflix Clone on Kubernetes, offering practical experience in efficient application deployment.</p>
                                         <hr class="cardDivider" />
@@ -406,7 +397,7 @@
                                     <div class="cardContent">
                                         <h3 class="cardTitle">Auto Scaling Group and Application Load Balancer</h3>
                                         <div class="cardImageWrapper">
-                                            <img class="cardImg" src="images/creating-an-auto-scaling-group-and-application-load-balancer-in-aws.webp" alt="Auto Scaling Group and Application Load Balancer" />
+                                            <img class="cardImg" src="images/creating-an-auto-scaling-group-and-application-load-balancer-in-aws.webp" alt="Auto Scaling Group and Application Load Balancer" loading="lazy" />
                                         </div>
                                         <p class="portfoliop">This project is a hands-on lab that teaches how to create an Auto Scaling Group and Application Load Balancer in Amazon Web Services (AWS).</p>
                                         <hr class="cardDivider" />
@@ -434,11 +425,11 @@
                         <div class="fields">
                             <div class="field half">
                                 <label for="name">Name</label>
-                                <input type="text" name="name" id="name" required />
+                                <input type="text" name="name" id="name" required autocomplete="name" />
                             </div>
                             <div class="field half">
                                 <label for="email">Email</label>
-                                <input type="email" name="email" id="email" required />
+                                <input type="email" name="email" id="email" required autocomplete="email" />
                             </div>
                             <div class="field">
                                 <label for="message">Message</label>
@@ -477,8 +468,17 @@
         <script src="assets/js/gototop.js" defer></script>
         <script src="assets/js/copyright-year.js" defer></script>
 
-        <button id="goTopBtn" title="Back to top" aria-label="Scroll to top">
+        <button type="button" id="goTopBtn" title="Back to top" aria-label="Scroll to top">
             <i class="fas fa-chevron-up"></i>
         </button>
+
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J793YCB66V"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag("js", new Date());
+            gtag("config", "G-J793YCB66V");
+        </script>
     </body>
 </html>

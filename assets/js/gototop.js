@@ -1,11 +1,11 @@
 const goTopBtn = document.getElementById("goTopBtn");
 
-window.onscroll = function () {
+window.addEventListener("scroll", function () {
   goTopBtn.style.display =
     document.body.scrollTop > 200 || document.documentElement.scrollTop > 200
       ? "block"
       : "none";
-};
+});
 
 goTopBtn.addEventListener("click", function (e) {
   e.preventDefault();

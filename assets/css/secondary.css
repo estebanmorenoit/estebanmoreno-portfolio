@@ -1,3 +1,22 @@
+/* Skip to content link (keyboard accessibility) */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.5em 1em;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  z-index: 9999;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
 /* Portfolio Page CSS */
 .row {
   display: flex;
