@@ -8,7 +8,6 @@
 
 	var	$window = $(window),
 		$body = $('body'),
-		$wrapper = $('#wrapper'),
 		$header = $('#header'),
 		$footer = $('#footer'),
 		$main = $('#main'),
@@ -30,28 +29,6 @@
 				$body.removeClass('is-preload');
 			}, 100);
 		});
-
-	// Fix: Flexbox min-height bug on IE.
-		if (browser.name == 'ie') {
-
-			var flexboxFixTimeoutId;
-
-			$window.on('resize.flexbox-fix', function() {
-
-				clearTimeout(flexboxFixTimeoutId);
-
-				flexboxFixTimeoutId = setTimeout(function() {
-
-					if ($wrapper.prop('scrollHeight') > $window.height())
-						$wrapper.css('height', 'auto');
-					else
-						$wrapper.css('height', '100vh');
-
-				}, 250);
-
-			}).triggerHandler('resize.flexbox-fix');
-
-		}
 
 	// Nav.
 		var $nav = $header.children('nav'),
@@ -306,7 +283,7 @@
 			});
 
 		// Events.
-			$body.on('click', function(event) {
+			$body.on('click', function() {
 
 				// Article visible? Hide.
 					if ($body.hasClass('is-article-visible'))
@@ -316,20 +293,8 @@
 
 			$window.on('keyup', function(event) {
 
-				switch (event.keyCode) {
-
-					case 27:
-
-						// Article visible? Hide.
-							if ($body.hasClass('is-article-visible'))
-								$main._hide(true);
-
-						break;
-
-					default:
-						break;
-
-				}
+				if (event.key === 'Escape' && $body.hasClass('is-article-visible'))
+					$main._hide(true);
 
 			});
 
@@ -356,7 +321,7 @@
 							event.stopPropagation();
 
 						// Show article.
-							$main._show(location.hash.substr(1));
+							$main._show(location.hash.slice(1));
 
 					}
 
@@ -395,7 +360,7 @@
 				if (location.hash != ''
 				&&	location.hash != '#')
 					$window.on('load', function() {
-						$main._show(location.hash.substr(1), true);
+						$main._show(location.hash.slice(1), true);
 					});
 
 })(jQuery);

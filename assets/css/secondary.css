@@ -746,3 +746,23 @@
   margin-right: 6px;
   font-size: 1rem;
 }
+
+/* Contact form status messages */
+.form-status-success,
+.form-status-error {
+  padding: 0.6em 1em;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.form-status-success {
+  background: rgba(100, 200, 120, 0.15);
+  color: #6dbf7e;
+  border: 1px solid rgba(100, 200, 120, 0.4);
+}
+
+.form-status-error {
+  background: rgba(220, 80, 80, 0.15);
+  color: #e07070;
+  border: 1px solid rgba(220, 80, 80, 0.4);
+}
