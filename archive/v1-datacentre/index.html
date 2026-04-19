@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic Meta Tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Esteban Moreno's portfolio showcasing cloud and DevOps projects." />
+<meta name="author" content="Esteban Moreno" />
+        <meta name="robots" content="index, follow" />
+
+        <title>Esteban Moreno | DevOps Engineer Portfolio</title>
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="Esteban Moreno – DevOps Portfolio" />
+        <meta property="og:description" content="Portfolio showcasing DevOps projects using AWS, Terraform, Kubernetes, and more." />
+        <meta property="og:image" content="https://estebanmoreno.link/images/Cloud%20Resume%20Challenge%20Cover.webp" />
+        <meta property="og:url" content="https://estebanmoreno.link" />
+        <meta property="og:type" content="website" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Esteban Moreno – DevOps Engineer Portfolio" />
+        <meta name="twitter:description" content="Portfolio showcasing DevOps projects using AWS, Terraform, Kubernetes, and more." />
+        <meta name="twitter:image" content="https://estebanmoreno.link/images/Cloud%20Resume%20Challenge%20Cover.webp" />
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Esteban Moreno",
+                "jobTitle": "DevOps Engineer",
+                "email": "morenoramirezesteban@gmail.com",
+                "url": "https://estebanmoreno.link",
+                "sameAs": ["https://github.com/estebanmorenoit", "https://linkedin.com/in/estebanmorenoramirez", "https://blog.estebanmoreno.link"]
+            }
+        </script>
+
+        <!-- Canonical + RSS -->
+        <link rel="canonical" href="https://estebanmoreno.link/" />
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://blog.estebanmoreno.link/rss.xml" />
+
+        <!-- Stylesheets (local first) -->
+        <link rel="stylesheet" href="assets/css/main.css?v=2" />
+        <link rel="stylesheet" href="assets/css/secondary.css?v=2" />
+
+        <!-- Preload + Load Font Awesome -->
+        <link
+            rel="preload"
+            as="style"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            onload="this.onload=null;this.rel='stylesheet'"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <noscript>
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+                integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer"
+            />
+        </noscript>
+
+        <!-- Font Preconnect (must come before the font request below) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+        <!-- Preload + Load Google Fonts -->
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+        <noscript>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" />
+        </noscript>
+
+        <!-- Noscript fallback -->
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+        <!-- Favicons -->
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/svg+xml" href="/images/icons/favicon.svg" />
+        <link rel="shortcut icon" href="/images/icons/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png" />
+        <link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-config" content="images/icons/browserconfig.xml" />
+
+        <!-- PWA -->
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="apple-mobile-web-app-title" content="Esteban Moreno | DevOps Engineer Portfolio" />
+
+        <!-- Google HTML Tag Verification -->
+        <meta name="google-site-verification" content="K3SLI8BvS6dsixqLa-XHastet2V7kjJ_clpjxuuu29U" />
+    </head>
+
+    <body class="is-preload">
+        <a href="#main" class="skip-to-content">Skip to content</a>
+        <div id="wrapper">
+            <header id="header">
+                <div class="content">
+                    <div class="inner">
+                        <h1>Esteban Moreno</h1>
+                        <p>DevOps Engineer: AWS, Terraform, Linux, Docker, CI/CD Expert</p>
+                        <ul class="icons">
+                            <li>
+                                <a href="https://linkedin.com/in/estebanmorenoramirez" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/estebanmorenoit" target="_blank" rel="noopener noreferrer" class="icon brands fa-github" title="GitHub"><span class="label">GitHub</span></a>
+                            </li>
+                            <li>
+                                <a href="mailto:morenoramirezesteban@gmail.com" class="icon far fa-envelope-open" title="Email"><span class="label">Email</span></a>
+                            </li>
+                            <li>
+                                <a href="https://blog.estebanmoreno.link/rss.xml" target="_blank" rel="noopener noreferrer" class="icon solid fa-rss" title="RSS Feed" aria-label="RSS Feed">
+                                    <span class="label">RSS</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#intro" aria-label="Go to Introduction section">Intro</a></li>
+                        <li><a href="images/EstebanMorenoResume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Esteban Moreno's resume in PDF format">CV</a></li>
+                        <li><a href="#projects" aria-label="Go to Projects section">Projects</a></li>
+                        <li><a href="https://blog.estebanmoreno.link" target="_blank" rel="noopener noreferrer" aria-label="Open Esteban Moreno's blog in a new tab">Blog</a></li>
+                        <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Main -->
+            <main id="main">
+                <!-- Intro -->
+                <article id="intro" aria-labelledby="intro-heading">
+                    <div class="aboutMe">
+                        <h2 id="intro-heading" class="underlined-heading">Introduction</h2>
+                        <div class="introContent">
+                            <p>
+                                I am a DevOps Engineer with experience in AWS, Kubernetes, Terraform, CI/CD, observability, and automation. I work on building scalable, reliable infrastructure and optimizing workflows to improve efficiency.
+                                Comfortable tackling complex challenges and delivering practical solutions in fast-paced environments.
+                            </p>
+                            <p>
+                                During my tenure at X-Tention, I have worked on automating cloud infrastructure, optimizing Kubernetes deployments, and improving system observability. I also contribute to CI/CD pipelines to streamline
+                                software delivery while keeping security and compliance in check.
+                            </p>
+                            <p>
+                                Committed to continuous learning and improvement, I focus on automation, infrastructure as code, and monitoring. Adaptability, clear communication, and a problem-solving mindset enable me to contribute
+                                effectively to projects and keep things running smoothly.
+                            </p>
+                        </div>
+
+                        <!-- Skills Matrix -->
+                        <div class="skills-matrix">
+                            <h3 class="underlined-heading">Technology Stack</h3>
+                            <div class="skills-grid">
+                                <!-- Cloud -->
+                                <div class="skill-category">
+                                    <h4><i class="fa-solid fa-cloud" aria-hidden="true"></i> Cloud</h4>
+                                    <ul>
+                                        <li><i class="fa-brands fa-aws" aria-hidden="true"></i> AWS</li>
+                                        <li><i class="fa-solid fa-server" aria-hidden="true"></i> EC2, S3, IAM, VPC, ALB</li>
+                                        <li><i class="fa-solid fa-globe" aria-hidden="true"></i> Route 53</li>
+                                        <li><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> CloudWatch</li>
+                                    </ul>
+                                </div>
+
+                                <!-- IaC & Automation -->
+                                <div class="skill-category">
+                                    <h4><i class="fa-solid fa-code" aria-hidden="true"></i> IaC & Automation</h4>
+                                    <ul>
+                                        <li><i class="fa-solid fa-terminal" aria-hidden="true"></i> Terraform</li>
+                                        <li><i class="fa-solid fa-robot" aria-hidden="true"></i> GitLab CI/CD</li>
+                                        <li><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> SSM Automation</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Containers & Orchestration -->
+                                <div class="skill-category">
+                                    <h4><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i> Containers & Orchestration</h4>
+                                    <ul>
+                                        <li><i class="fa-brands fa-docker" aria-hidden="true"></i> Docker</li>
+                                        <li><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Kubernetes (EKS, microk8s, Tanzu)</li>
+                                        <li><i class="fa-solid fa-anchor" aria-hidden="true"></i> Helm</li>
+                                        <li><i class="fa-solid fa-code-branch" aria-hidden="true"></i> ArgoCD</li>
+                                        <li><i class="fa-solid fa-box-open" aria-hidden="true"></i> Zarf</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Observability & Monitoring -->
+                                <div class="skill-category">
+                                    <h4><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Observability</h4>
+                                    <ul>
+                                        <li><i class="fa-solid fa-eye" aria-hidden="true"></i> Prometheus</li>
+                                        <li><i class="fa-solid fa-database" aria-hidden="true"></i> Thanos</li>
+                                        <li><i class="fa-solid fa-gauge" aria-hidden="true"></i> Grafana</li>
+                                        <li><i class="fa-solid fa-stream" aria-hidden="true"></i> Fluent Bit, Loki</li>
+                                        <li><i class="fa-solid fa-bell" aria-hidden="true"></i> Alertmanager</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Certifications -->
+                        <div class="certifications">
+                            <h3 class="underlined-heading">Certifications</h3>
+                            <p><em>Verify on Credly (click badge)</em></p>
+                            <ul class="cert-badges-grid">
+                                <li>
+                                    <a href="https://www.credly.com/badges/ac68a736-3d05-45d0-8181-e34d0df00f2e" target="_blank" rel="noopener noreferrer" aria-label="AWS Certified Cloud Practitioner Badge">
+                                        <img src="images/credly1.png" alt="AWS Certified Cloud Practitioner Badge" loading="lazy" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.credly.com/badges/40bd01b9-e41d-46b2-a4ce-b8727bc908fc" target="_blank" rel="noopener noreferrer" aria-label="AWS Certified Solutions Architect - Associate Badge">
+                                        <img src="images/credly2.png" alt="AWS Certified Solutions Architect - Associate Badge" loading="lazy" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.credly.com/badges/982d68cb-d058-4d10-9940-8f47230c9eda/public_url" target="_blank" rel="noopener noreferrer" aria-label="LPI Linux Essentials Badge">
+                                        <img src="images/LPI.png" alt="LPI Linux Essentials Badge" loading="lazy" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://app.exampro.co/student/achievements/validate/badge/euKUYzM44I4IpuJV7mEXGg1a90b" target="_blank" rel="noopener noreferrer" aria-label="Terraform Beginner Bootcamp Badge">
+                                        <img src="images/terraform-beginner-bootcamp.png" alt="Terraform Beginner Bootcamp Badge" loading="lazy" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.credly.com/badges/7e8c04a3-a51e-43ad-85f4-697a509dee86" target="_blank" rel="noopener noreferrer" aria-label="Cisco Certified Network Associate Badge">
+                                        <img src="images/cisco-network.png" alt="Cisco Certified Network Associate Badge" loading="lazy" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.credly.com/badges/bbf86508-e3de-4998-818b-9ccf2884b492" target="_blank" rel="noopener noreferrer" aria-label="Cisco Cybersecurity Essentials Badge">
+                                        <img src="images/cisco-cybersecurity.png" alt="Cisco Cybersecurity Essentials Badge" loading="lazy" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Portfolio -->
+                <article id="projects" aria-labelledby="projects-heading">
+                    <h2 id="projects-heading" class="underlined-heading">Projects</h2>
+                    <div class="container">
+                        <div class="row">
+                            <div class="topColumn">
+                                <div class="outline">
+                                    <div class="cardContent">
+                                        <h3 class="cardTitle">Portfolio Project - Cloud Resume Challenge</h3>
+                                        <div class="cardImageWrapper">
+                                            <img class="cardImg" src="images/cloud-resume-challenge-cover.webp" alt="Cloud Resume Challenge" loading="lazy" />
+                                        </div>
+                                        <p class="portfoliop">
+                                            This project effectively highlights DevOps expertise by creating a portfolio using a serverless web app, AWS services, and a strong CI/CD pipeline.
+                                        </p>
+                                        <hr class="cardDivider" />
+                                        <p class="portfoliop"><strong>Technologies used:</strong> AWS, API Gateway, DynamoDB, Terraform, GitHub Actions.</p>
+                                    </div>
+                                    <div class="centerButton">
+                                        <a href="https://blog.estebanmoreno.link/series/cloud-resume-challenge" target="_blank" class="button primary">Blog Post</a>
+                                        <a href="https://github.com/estebanmorenoit/estebanmoreno-portfolio" target="_blank" class="button primary" aria-label="View GitHub repository">
+                                            <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="topColumn">
+                                <div class="outline">
+                                    <div class="cardContent">
+                                        <h3 class="cardTitle">DevOps Project - #90daysofdevops challenge</h3>
+                                        <div class="cardImageWrapper">
+                                            <img class="cardImg" src="images/90daysofdevops-challenge.webp" alt="#90daysofdevops challenge" loading="lazy" />
+                                        </div>
+                                        <p class="portfoliop">The #90DaysOfDevOps Challenge is a dedicated initiative aimed at promoting continuous learning and skill development in the field of DevOps over a 90-day period.</p>
+                                        <hr class="cardDivider" />
+                                        <p class="portfoliop"><strong>Technologies used:</strong> AWS, Linux, Terraform, Jenkins, Docker, Kubernetes, Ansible, Grafana.</p>
+                                    </div>
+                                    <div class="centerButton">
+                                        <a href="https://blog.estebanmoreno.link/series/90-days-of-devops" target="_blank" class="button primary">Blog Post</a>
+                                        <a href="https://github.com/estebanmorenoit/90DaysOfDevOps" target="_blank" class="button primary" aria-label="View GitHub repository">
+                                            <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="topColumn">
+                                <div class="outline">
+                                    <div class="cardContent">
+                                        <h3 class="cardTitle">2-Tier Architecture in AWS with Terraform Cloud CI/CD</h3>
+                                        <div class="cardImageWrapper">
+                                            <img
+                                                class="cardImg"
+                                                src="images/devops-hands-on-project---building-a-scalable-2-tier-architecture-in-aws-with-terraform-and-terraform-cloud-ci-cd.webp"
+                                                alt="DevOps Project - 2-Tier Architecture Using Terraform and Terraform Cloud"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                        <p class="portfoliop">
+                                            This project delivers a practical guide for creating and optimizing an agile 2-tier AWS architecture using Terraform and Terraform Cloud CI/CD.
+                                        </p>
+                                        <hr class="cardDivider" />
+                                        <p class="portfoliop"><strong>Technologies used:</strong> AWS, Git, Terraform, Terraform Cloud</p>
+                                    </div>
+                                    <div class="centerButton">
+                                        <a href="https://blog.estebanmoreno.link/building-a-scalable-2-tier-architecture-in-aws-with-terraform-and-terraform-cloud-cicd" target="_blank" class="button primary">Blog Post</a>
+                                        <a href="https://github.com/estebanmorenoit/2-tier-architecture-terraform" target="_blank" class="button primary" aria-label="View GitHub repository">
+                                            <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="topColumn">
+                                <div class="outline">
+                                    <div class="cardContent">
+                                        <h3 class="cardTitle">DevOps Project - Jenkins Declarative Pipeline</h3>
+                                        <div class="cardImageWrapper">
+                                            <img class="cardImg" src="images/hands-on-project---jenkins-declarative-pipeline.webp" alt="Jenkins Declarative Pipeline" loading="lazy" />
+                                        </div>
+                                        <p class="portfoliop">This project provides hands-on experience with Jenkins Declarative Pipeline, guiding you through its implementation for efficient CI/CD workflows.</p>
+                                        <hr class="cardDivider" />
+                                        <p class="portfoliop"><strong>Technologies used:</strong> AWS, Docker, Jenkins, Git, DockerHub, GitHub</p>
+                                    </div>
+                                    <div class="centerButton">
+                                        <a href="https://blog.estebanmoreno.link/hands-on-project-jenkins-declarative-pipeline" target="_blank" class="button primary">Blog Post</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="topColumn">
+                                <div class="outline">
+                                    <div class="cardContent">
+                                        <h3 class="cardTitle">DevOps Project - CI/CD pipeline on AWS</h3>
+                                        <div class="cardImageWrapper">
+                                            <img class="cardImg" src="images/devops-hands-on-project---cicd-pipeline-on-aws.webp" alt="DevOps Project - CI/CD Pipeline on AWS" loading="lazy" />
+                                        </div>
+                                        <p class="portfoliop">This project offers a hands-on experience in building and optimizing a robust CI/CD pipeline on AWS, ensuring efficient application deployment.</p>
+                                        <hr class="cardDivider" />
+                                        <p class="portfoliop"><strong>Technologies used:</strong> AWS, Git, CodeCommit, CodeBuild, CodeDeploy, CodePipeline</p>
+                                    </div>
+                                    <div class="centerButton">
+                                        <a href="https://blog.estebanmoreno.link/cicd-pipeline-on-aws-codecommit-part-1" target="_blank" class="button primary">Blog Post</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="topColumn">
+                                <div class="outline">
+                                    <div class="cardContent">
+                                        <h3 class="cardTitle">Hybrid Directory between AWS and On-Premises</h3>
+                                        <div class="cardImageWrapper">
+                                            <img class="cardImg" src="images/hands-on-labs-hybrid-directory-between-aws-and-simulated-on-premises.webp" alt="Hybrid Directory between AWS and On-Premises" loading="lazy" />
+                                        </div>
+                                        <p class="portfoliop">
+                                            Discover a streamlined guide for integrating on-premises infrastructure with AWS seamlessly. From initial setup to creating Workspaces, ensure efficient connectivity at every stage.
+                                        </p>
+                                        <hr class="cardDivider" />
+                                        <p class="portfoliop"><strong>Technologies used:</strong> AWS Managed Microsoft AD, AWS FSx, AWS Workspaces</p>
+                                    </div>
+                                    <div class="centerButton">
+                                        <a href="https://blog.estebanmoreno.link/hybrid-directory-between-aws-and-simulated-on-premises" target="_blank" class="button primary">Blog Post</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="topColumn">
+                                <div class="outline">
+                                    <div class="cardContent">
+                                        <h3 class="cardTitle">DevOps Project - Deploy Netflix Clone on Kubernetes</h3>
+                                        <div class="cardImageWrapper">
+                                            <img class="cardImg" src="images/devops-hands-on-project---deploying-a-netflix-clone-web-application-on-a-kubernetes-cluster-.webp" alt="DevOps Project - Deploy Netflix Clone on Kubernetes" loading="lazy" />
+                                        </div>
+                                        <p class="portfoliop">This project provides a hands-on opportunity to deploy a Netflix Clone on Kubernetes, offering practical experience in efficient application deployment.</p>
+                                        <hr class="cardDivider" />
+                                        <p class="portfoliop"><strong>Technologies used:</strong> AWS, Kubernetes, Docker, Container Orchestration</p>
+                                    </div>
+                                    <div class="centerButton">
+                                        <a href="https://blog.estebanmoreno.link/devops-hands-on-project-deploying-a-netflix-clone-web-application-on-a-kubernetes-cluster" target="_blank" class="button primary">Blog Post</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="topColumn">
+                                <div class="outline">
+                                    <div class="cardContent">
+                                        <h3 class="cardTitle">Auto Scaling Group and Application Load Balancer</h3>
+                                        <div class="cardImageWrapper">
+                                            <img class="cardImg" src="images/creating-an-auto-scaling-group-and-application-load-balancer-in-aws.webp" alt="Auto Scaling Group and Application Load Balancer" loading="lazy" />
+                                        </div>
+                                        <p class="portfoliop">This project is a hands-on lab that teaches how to create an Auto Scaling Group and Application Load Balancer in Amazon Web Services (AWS).</p>
+                                        <hr class="cardDivider" />
+                                        <p class="portfoliop"><strong>Technologies used:</strong> AWS, Auto Scaling, Elastic Load Balancer, Amazon EC2</p>
+                                    </div>
+                                    <div class="centerButton">
+                                        <a href="https://blog.estebanmoreno.link/aws-hands-on-labs-creating-an-auto-scaling-group-and-application-load-balancer-in-aws" target="_blank" class="button primary">Blog Post</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Contact -->
+                <article id="contact" aria-labelledby="contact-heading">
+                    <h2 id="contact-heading" class="underlined-heading">Contact</h2>
+                    <form id="contact-form" method="POST" action="https://formspree.io/f/xgvkaylz">
+                        <!-- Spam prevention -->
+                        <input type="text" name="_honey" style="display: none;" />
+
+                        <!-- Redirect back to portfolio -->
+                        <input type="hidden" name="_redirect" value="https://estebanmoreno.link" />
+
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" required autocomplete="name" />
+                            </div>
+                            <div class="field half">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" required autocomplete="email" />
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="4" required></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                        </ul>
+                    </form>
+                </article>
+            </main>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p>
+                    <span class="visitor-label">You are visitor number:</span>
+                    <span id="visitors" class="visitor-count">Loading...</span>
+                </p>
+                <p class="fade-in">&copy; <span id="currentYear"></span> Esteban Moreno. All rights reserved.</p>
+            </footer>
+        </div>
+
+        <!-- BG -->
+        <div id="bg" aria-hidden="true"></div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js" defer></script>
+        <script src="assets/js/browser.min.js" defer></script>
+        <script src="assets/js/breakpoints.min.js" defer></script>
+        <script src="assets/js/util.js" defer></script>
+        <script src="assets/js/main.js" defer></script>
+        <script src="assets/js/visitorcount.js" defer></script>
+        <script src="assets/js/contact-form.js" defer></script>
+        <script src="assets/js/gototop.js" defer></script>
+        <script src="assets/js/copyright-year.js" defer></script>
+
+        <button type="button" id="goTopBtn" title="Back to top" aria-label="Scroll to top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J793YCB66V"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag("js", new Date());
+            gtag("config", "G-J793YCB66V");
+        </script>
+    </body>
+</html>

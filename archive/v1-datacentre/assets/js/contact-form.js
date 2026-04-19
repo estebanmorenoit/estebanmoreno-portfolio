@@ -3,26 +3,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!form) return;
 
-    // Create a status message element below the form
+    // Create a status message element below the form actions
     const statusMsg = document.createElement("p");
     statusMsg.id = "form-status";
     statusMsg.setAttribute("role", "status");
     statusMsg.setAttribute("aria-live", "polite");
+    statusMsg.style.marginTop = "1em";
     form.appendChild(statusMsg);
 
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
 
-        // Support both <input type="submit"> and <button type="submit">
-        const submitBtn = form.querySelector('input[type="submit"], button[type="submit"]');
-        if (submitBtn) {
-            submitBtn.disabled = true;
-            if (submitBtn.tagName === "INPUT") {
-                submitBtn.value = "Sending\u2026";
-            } else {
-                submitBtn.textContent = "Sending\u2026";
-            }
-        }
+        const submitBtn = form.querySelector('input[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.value = "Sending…";
         statusMsg.textContent = "";
         statusMsg.className = "";
 
@@ -37,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 statusMsg.textContent = "Thank you! Your message has been sent.";
                 statusMsg.className = "form-status-success";
                 form.reset();
+                window.location.hash = "";
             } else {
                 statusMsg.textContent = "Oops! Something went wrong. Please try again.";
                 statusMsg.className = "form-status-error";
@@ -45,14 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
             statusMsg.textContent = "Could not send message. Please check your connection and try again.";
             statusMsg.className = "form-status-error";
         } finally {
-            if (submitBtn) {
-                submitBtn.disabled = false;
-                if (submitBtn.tagName === "INPUT") {
-                    submitBtn.value = "Send Message";
-                } else {
-                    submitBtn.textContent = "Send message \u2192";
-                }
-            }
+            submitBtn.disabled = false;
+            submitBtn.value = "Send Message";
         }
     });
 });
