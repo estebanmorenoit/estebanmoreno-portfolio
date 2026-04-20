@@ -45,7 +45,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/portfolio-v2.css?v=5" />
+    <link rel="stylesheet" href="assets/css/portfolio-v2.css?v=7" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png" />
@@ -84,7 +84,21 @@
     </div>
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">☀</button>
     <a href="images/EstebanMorenoResume.pdf" target="_blank" rel="noopener noreferrer" class="nav-cta">&#8595; Resume</a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-mobile-menu">
+        <span></span><span></span><span></span>
+    </button>
 </nav>
+
+<!-- ─── Mobile nav drawer ─── -->
+<div class="nav-mobile-menu" id="nav-mobile-menu" aria-hidden="true">
+    <a href="#intro">Intro</a>
+    <a href="#stack">Stack</a>
+    <a href="#certs">Certs</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="images/EstebanMorenoResume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-resume">&#8595; Download Resume</a>
+</div>
 
 <!-- ─── Open-to-work strip ─── -->
 <div class="ofw-strip" role="banner" aria-label="Employment status">
@@ -595,6 +609,42 @@
     } catch (e) {
         // silently keep the fallback content already in the HTML
     }
+})();
+</script>
+
+<!-- Hamburger menu -->
+<script>
+(function() {
+    var btn = document.getElementById('nav-hamburger');
+    var menu = document.getElementById('nav-mobile-menu');
+    if (!btn || !menu) return;
+
+    function closeMenu() {
+        btn.classList.remove('open');
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+    }
+
+    btn.addEventListener('click', function() {
+        var isOpen = menu.classList.contains('open');
+        if (isOpen) { closeMenu(); } else {
+            btn.classList.add('open');
+            menu.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+            menu.setAttribute('aria-hidden', 'false');
+        }
+    });
+
+    // Close when a nav link is clicked
+    menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeMenu();
+    });
 })();
 </script>
 
