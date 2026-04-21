@@ -45,7 +45,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/portfolio-v2.css?v=7" />
+    <link rel="stylesheet" href="assets/css/portfolio-v2.css?v=8" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png" />
@@ -520,12 +520,14 @@
         <div class="counter-widget" aria-label="Visitor count">
             <div>
                 <div class="counter-label">visitor</div>
-                <div class="counter-num" id="visitor-count" aria-live="polite">&#8230;</div>
+                <div class="counter-num counter-num--tip" id="visitor-count" aria-live="polite"
+                     data-tip="Architecture: S3 &rarr; CloudFront &rarr; API Gateway &rarr; Lambda &rarr; DynamoDB">&#8230;</div>
             </div>
             <div class="counter-divider" aria-hidden="true"></div>
-            <div style="font-size:11px; color:#9ca3af; line-height:1.5;">
+            <div style="font-size:11px; color:#9ca3af; line-height:1.6;">
                 You're visitor #<span id="visitor-inline" aria-live="polite">...</span><br>
-                Built with DynamoDB + Lambda
+                <span class="counter-arch-label">Live API &middot; AWS Lambda + DynamoDB</span><br>
+                <a href="https://github.com/estebanmorenoit/estebanmoreno-portfolio" target="_blank" rel="noopener noreferrer" class="counter-code-link">View the code &rarr;</a>
             </div>
         </div>
 

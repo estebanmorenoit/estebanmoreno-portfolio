@@ -1,3 +1,4 @@
+.DS_Store
 infra/credentials.auto.tfvars
 infra/terraform.tfstate
 infra/terraform.tfstate.backup

@@ -365,7 +365,40 @@ section { padding: clamp(56px, 7vw, 88px) clamp(20px, 5vw, 64px); border-top: 1p
   font-size: 28px; font-weight: 700; color: var(--accent);
   letter-spacing: -0.5px; min-width: 3ch;
 }
+.counter-num--tip {
+  position: relative; cursor: default;
+}
+.counter-num--tip::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%);
+  background: var(--fg); color: var(--bg);
+  font-family: var(--mono); font-size: 10px; font-weight: 400;
+  white-space: nowrap; padding: 6px 10px; border-radius: 6px;
+  pointer-events: none; opacity: 0; transition: opacity 0.15s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+.counter-num--tip::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 2px); left: 50%; transform: translateX(-50%);
+  border: 5px solid transparent; border-top-color: var(--fg);
+  pointer-events: none; opacity: 0; transition: opacity 0.15s ease;
+  z-index: 10;
+}
+.counter-num--tip:hover::after,
+.counter-num--tip:hover::before { opacity: 1; }
 .counter-label { color: var(--fg3); font-size: 13px; }
+.counter-arch-label {
+  color: var(--accent); font-size: 10px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.counter-code-link {
+  color: #9ca3af; text-decoration: none; font-size: 10px;
+  transition: color 0.15s ease;
+}
+.counter-code-link:hover { color: var(--accent); }
 .counter-divider {
   width: 1px; height: 40px; background: rgba(255,255,255,0.12); flex-shrink: 0;
 }
