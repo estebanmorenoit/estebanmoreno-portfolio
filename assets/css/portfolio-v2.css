@@ -9,7 +9,7 @@
   --bg2:          #ece8e1;
   --fg:           #111318;
   --fg2:          #5a5a65;
-  --fg3:          #9a9aa8;
+  --fg3:          #636374;
   --accent:       #10b981;
   --accent2:      #059669;
   --border:       #e2ddd8;
@@ -28,12 +28,12 @@
   --bg2:      #1c1f2b;
   --fg:       #eeedf0;
   --fg2:      #a0a0b3;
-  --fg3:      #5a5a72;
+  --fg3:      #9090a8;
   --accent:   #34d399;
   --accent2:  #10b981;
   --border:   #2e3147;
   --white:    #222538;   /* card surface — slightly lighter than --bg2 */
-  --btn-bg:   #059669;   /* emerald buttons in dark mode for contrast */
+  --btn-bg:   #047857;   /* emerald-700: passes 4.5:1 with white text */
   --btn-text: #ffffff;
   --card-shadow: 0 1px 3px rgba(0,0,0,.5), 0 4px 16px rgba(0,0,0,.35);
 }
@@ -128,7 +128,7 @@ nav {
 /* ─── Open-to-work strip ─── */
 .ofw-strip {
   background: var(--accent);
-  color: white;
+  color: #111318;
   font-family: var(--mono);
   font-size: 14px;
   padding: 9px clamp(16px, 5vw, 64px);
@@ -136,7 +136,7 @@ nav {
   letter-spacing: 0.02em;
 }
 .ofw-dot {
-  width: 8px; height: 8px; border-radius: 50%; background: white;
+  width: 8px; height: 8px; border-radius: 50%; background: #111318;
   animation: pulse 2s infinite; flex-shrink: 0;
 }
 @keyframes pulse {
@@ -389,7 +389,7 @@ section { padding: clamp(56px, 7vw, 88px) clamp(20px, 5vw, 64px); border-top: 1p
 }
 .counter-num--tip:hover::after,
 .counter-num--tip:hover::before { opacity: 1; }
-.counter-label { color: var(--fg3); font-size: 13px; }
+.counter-label { color: #9ca3af; font-size: 13px; }
 .counter-arch-label {
   color: var(--accent); font-size: 10px; font-weight: 600; text-transform: uppercase;
   letter-spacing: 0.06em;
