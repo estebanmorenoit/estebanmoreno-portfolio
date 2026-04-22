@@ -13,6 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
+      # Update sitemap lastmod to today's date
+      - name: Update sitemap lastmod
+        run: |
+          TODAY=$(date -u +"%Y-%m-%d")
+          sed -i "s|<lastmod>.*</lastmod>|<lastmod>${TODAY}</lastmod>|g" sitemap.xml
+
       # Minify HTML, CSS, and JS
       - name: Minify HTML, CSS, and JS files
         run: |

@@ -13,7 +13,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Esteban Moreno – DevOps Portfolio" />
     <meta property="og:description" content="Portfolio showcasing DevOps projects using AWS, Terraform, Kubernetes, and more." />
-    <meta property="og:image" content="https://estebanmoreno.link/images/Cloud%20Resume%20Challenge%20Cover.webp" />
+    <meta property="og:image" content="https://estebanmoreno.link/images/cloud-resume-challenge-cover.webp" />
     <meta property="og:url" content="https://estebanmoreno.link" />
     <meta property="og:type" content="website" />
 
@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Esteban Moreno – DevOps Engineer Portfolio" />
     <meta name="twitter:description" content="Portfolio showcasing DevOps projects using AWS, Terraform, Kubernetes, and more." />
-    <meta name="twitter:image" content="https://estebanmoreno.link/images/Cloud%20Resume%20Challenge%20Cover.webp" />
+    <meta name="twitter:image" content="https://estebanmoreno.link/images/cloud-resume-challenge-cover.webp" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -29,15 +29,69 @@
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Esteban Moreno",
-            "jobTitle": "DevOps Engineer",
+            "jobTitle": "Senior DevOps Engineer",
             "email": "morenoramirezesteban@gmail.com",
             "url": "https://estebanmoreno.link",
-            "sameAs": ["https://github.com/estebanmorenoit", "https://linkedin.com/in/estebanmorenoramirez", "https://blog.estebanmoreno.link"]
+            "image": "https://estebanmoreno.link/images/cloud-resume-challenge-cover.webp",
+            "sameAs": [
+                "https://github.com/estebanmorenoit",
+                "https://linkedin.com/in/estebanmorenoramirez",
+                "https://blog.estebanmoreno.link"
+            ],
+            "worksFor": {
+                "@type": "Organization",
+                "name": "X-Tention"
+            },
+            "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Miguel Hernández University",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Alicante",
+                    "addressCountry": "ES"
+                }
+            },
+            "knowsAbout": [
+                "AWS", "Kubernetes", "Terraform", "DevOps", "CI/CD", "GitOps",
+                "Docker", "Helm", "ArgoCD", "Prometheus", "Grafana", "Linux",
+                "Infrastructure as Code", "Cloud Computing", "Observability"
+            ],
+            "hasCredential": [
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "AWS Certified Solutions Architect — Associate",
+                    "credentialCategory": "certification",
+                    "recognizedBy": { "@type": "Organization", "name": "Amazon Web Services" }
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "AWS Certified Cloud Practitioner",
+                    "credentialCategory": "certification",
+                    "recognizedBy": { "@type": "Organization", "name": "Amazon Web Services" }
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "LPI Linux Essentials",
+                    "credentialCategory": "certification",
+                    "recognizedBy": { "@type": "Organization", "name": "Linux Professional Institute" }
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "Cisco Certified Network Associate (CCNA)",
+                    "credentialCategory": "certification",
+                    "recognizedBy": { "@type": "Organization", "name": "Cisco" }
+                }
+            ]
         }
     </script>
 
     <!-- Canonical -->
     <link rel="canonical" href="https://estebanmoreno.link/" />
+
+    <!-- DNS prefetch for external APIs -->
+    <link rel="dns-prefetch" href="https://gql.hashnode.com" />
+    <link rel="dns-prefetch" href="https://formspree.io" />
+    <link rel="dns-prefetch" href="https://qfky693v2f.execute-api.eu-west-2.amazonaws.com" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,7 +99,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/portfolio-v2.css?v=8" />
+    <link rel="stylesheet" href="assets/css/portfolio-v2.css?v=9" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png" />
@@ -61,7 +115,8 @@
 
     <!-- PWA -->
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#f8f7 ff4" />
+    <meta name="theme-color" content="#f4f1ec" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#13151c" media="(prefers-color-scheme: dark)" />
     <meta name="apple-mobile-web-app-title" content="Esteban Moreno | DevOps Engineer Portfolio" />
 
     <!-- Google Site Verification -->
