@@ -93,10 +93,11 @@
     <link rel="dns-prefetch" href="https://formspree.io" />
     <link rel="preconnect" href="https://qfky693v2f.execute-api.eu-west-2.amazonaws.com" crossorigin />
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts — async to avoid render-blocking (display=optional prevents layout shift) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=optional" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=optional" rel="stylesheet" /></noscript>
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/portfolio-v2.css?v=11" />
@@ -400,8 +401,8 @@
                         <span class="proj-tag">Docker</span><span class="proj-tag">Prometheus</span><span class="proj-tag">Grafana</span><span class="proj-tag">Loki</span><span class="proj-tag">Tailscale</span><span class="proj-tag">GitHub Actions</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://blog.estebanmoreno.link/building-a-production-grade-self-hosted-home-lab-on-a-raspberry-pi" target="_blank" rel="noopener noreferrer" class="proj-link">Blog post &rarr;</a>
-                        <a href="https://github.com/estebanmorenoit/rpi-home-lab" target="_blank" rel="noopener noreferrer" class="proj-link primary">GitHub &rarr;</a>
+                        <a href="https://blog.estebanmoreno.link/building-a-production-grade-self-hosted-home-lab-on-a-raspberry-pi" target="_blank" rel="noopener noreferrer" class="proj-link" aria-label="Blog post: Home Lab on Raspberry Pi">Blog post &rarr;</a>
+                        <a href="https://github.com/estebanmorenoit/rpi-home-lab" target="_blank" rel="noopener noreferrer" class="proj-link primary" aria-label="GitHub: rpi-home-lab">GitHub &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -417,8 +418,8 @@
                         <span class="proj-tag">AWS</span><span class="proj-tag">Terraform</span><span class="proj-tag">DynamoDB</span><span class="proj-tag">GitHub Actions</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://blog.estebanmoreno.link/series/cloud-resume-challenge" target="_blank" rel="noopener noreferrer" class="proj-link">Blog post &rarr;</a>
-                        <a href="https://github.com/estebanmorenoit/estebanmoreno-portfolio" target="_blank" rel="noopener noreferrer" class="proj-link primary">GitHub &rarr;</a>
+                        <a href="https://blog.estebanmoreno.link/series/cloud-resume-challenge" target="_blank" rel="noopener noreferrer" class="proj-link" aria-label="Blog post: Cloud Resume Challenge">Blog post &rarr;</a>
+                        <a href="https://github.com/estebanmorenoit/estebanmoreno-portfolio" target="_blank" rel="noopener noreferrer" class="proj-link primary" aria-label="GitHub: estebanmoreno-portfolio">GitHub &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -434,8 +435,8 @@
                         <span class="proj-tag">AWS</span><span class="proj-tag">Kubernetes</span><span class="proj-tag">Docker</span><span class="proj-tag">Ansible</span><span class="proj-tag">Grafana</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://blog.estebanmoreno.link/series/90-days-of-devops" target="_blank" rel="noopener noreferrer" class="proj-link">Blog post &rarr;</a>
-                        <a href="https://github.com/estebanmorenoit/90DaysOfDevOps" target="_blank" rel="noopener noreferrer" class="proj-link primary">GitHub &rarr;</a>
+                        <a href="https://blog.estebanmoreno.link/series/90-days-of-devops" target="_blank" rel="noopener noreferrer" class="proj-link" aria-label="Blog post: 90 Days of DevOps">Blog post &rarr;</a>
+                        <a href="https://github.com/estebanmorenoit/90DaysOfDevOps" target="_blank" rel="noopener noreferrer" class="proj-link primary" aria-label="GitHub: 90DaysOfDevOps">GitHub &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -451,8 +452,8 @@
                         <span class="proj-tag">AWS</span><span class="proj-tag">Terraform</span><span class="proj-tag">Terraform Cloud</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://blog.estebanmoreno.link/building-a-scalable-2-tier-architecture-in-aws-with-terraform-and-terraform-cloud-cicd" target="_blank" rel="noopener noreferrer" class="proj-link">Blog post &rarr;</a>
-                        <a href="https://github.com/estebanmorenoit/2-tier-architecture-terraform" target="_blank" rel="noopener noreferrer" class="proj-link primary">GitHub &rarr;</a>
+                        <a href="https://blog.estebanmoreno.link/building-a-scalable-2-tier-architecture-in-aws-with-terraform-and-terraform-cloud-cicd" target="_blank" rel="noopener noreferrer" class="proj-link" aria-label="Blog post: 2-Tier Architecture with Terraform Cloud">Blog post &rarr;</a>
+                        <a href="https://github.com/estebanmorenoit/2-tier-architecture-terraform" target="_blank" rel="noopener noreferrer" class="proj-link primary" aria-label="GitHub: 2-tier-architecture-terraform">GitHub &rarr;</a>
                     </div>
                 </div>
             </div>
