@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>404 — Page Not Found | Esteban Moreno</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=optional" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/portfolio-v2.css?v=11" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png" />
+
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 24px;
+        }
+        .error-code {
+            font-family: var(--mono);
+            font-size: clamp(72px, 18vw, 120px);
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .error-title {
+            font-size: clamp(20px, 4vw, 28px);
+            font-weight: 700;
+            color: var(--fg);
+            margin-bottom: 12px;
+        }
+        .error-desc {
+            font-size: 16px;
+            color: var(--fg2);
+            max-width: 420px;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .error-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .error-actions a {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 9px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: opacity 0.15s, transform 0.1s;
+        }
+        .error-actions a:hover { opacity: 0.82; transform: translateY(-1px); }
+        .error-actions .btn-home {
+            background: var(--btn-bg);
+            color: var(--btn-text);
+        }
+        .error-actions .btn-contact {
+            background: transparent;
+            color: var(--accent);
+            border: 1.5px solid var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Theme — inline to avoid flash -->
+<script>
+(function() {
+    var saved = localStorage.getItem('theme');
+    var theme = saved || 'dark';
+    if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+})();
+</script>
+
+<nav aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="Esteban Moreno — DevOps Engineer, go to home">Esteban Moreno<span> — DevOps Engineer</span></a>
+</nav>
+
+<main id="main-content">
+    <div class="error-page">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page not found</h1>
+        <p class="error-desc">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+        <div class="error-actions">
+            <a href="/" class="btn-home">Go home &rarr;</a>
+            <a href="/#contact" class="btn-contact">Get in touch</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <span>&copy; <span id="currentYear"></span> Esteban Moreno</span>
+    <span>&middot;</span>
+    <a href="https://estebanmoreno.link" target="_blank" rel="noopener noreferrer">estebanmoreno.link</a>
+    <div class="footer-divider"></div>
+    <a href="https://linkedin.com/in/estebanmorenoramirez" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
+    <a href="https://github.com/estebanmorenoit" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+</footer>
+
+<script src="/assets/js/copyright-year.js" defer></script>
+</body>
+</html>

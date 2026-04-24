@@ -88,10 +88,10 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://estebanmoreno.link/" />
 
-    <!-- DNS prefetch for external APIs -->
+    <!-- DNS prefetch / preconnect for external APIs -->
     <link rel="dns-prefetch" href="https://gql.hashnode.com" />
     <link rel="dns-prefetch" href="https://formspree.io" />
-    <link rel="dns-prefetch" href="https://qfky693v2f.execute-api.eu-west-2.amazonaws.com" />
+    <link rel="preconnect" href="https://qfky693v2f.execute-api.eu-west-2.amazonaws.com" crossorigin />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -128,7 +128,7 @@
 
 <!-- ─── Nav ─── -->
 <nav aria-label="Main navigation">
-    <a href="#intro" class="nav-logo">Esteban Moreno<span> — DevOps Engineer</span></a>
+    <a href="#intro" class="nav-logo" aria-label="Esteban Moreno — DevOps Engineer, go to top">Esteban Moreno<span> — DevOps Engineer</span></a>
     <div class="nav-links">
         <a href="#intro">Intro</a>
         <a href="#stack">Stack</a>
@@ -617,11 +617,11 @@
                 <input type="hidden" name="_redirect" value="https://estebanmoreno.link" />
 
                 <div class="form-row">
-                    <input type="text" name="name" id="name" placeholder="Name" required autocomplete="name" />
-                    <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email" />
+                    <input type="text" name="name" id="name" placeholder="Name" aria-label="Your name" required autocomplete="name" />
+                    <input type="email" name="email" id="email" placeholder="Email" aria-label="Your email address" required autocomplete="email" />
                 </div>
-                <input type="text" name="subject" id="subject" placeholder="Subject" />
-                <textarea name="message" id="message" placeholder="Message" rows="4" required></textarea>
+                <input type="text" name="subject" id="subject" placeholder="Subject" aria-label="Message subject" />
+                <textarea name="message" id="message" placeholder="Message" aria-label="Your message" rows="4" required></textarea>
                 <button type="submit" class="form-submit">Send message &rarr;</button>
             </form>
         </div>

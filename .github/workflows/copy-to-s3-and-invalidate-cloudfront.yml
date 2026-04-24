@@ -23,8 +23,8 @@ jobs:
       - name: Minify HTML, CSS, and JS files
         run: |
           npm install html-minifier-terser clean-css-cli terser --no-save
-          # Minify HTML
-          find . -name "*.html" -exec npx html-minifier-terser --collapse-whitespace --remove-comments --minify-css true --minify-js true -o {} {} \;
+          # Minify HTML (exclude archive — legacy files not deployed)
+          find . -name "*.html" -not -path "./archive/*" -exec npx html-minifier-terser --collapse-whitespace --remove-comments --minify-css true --minify-js true -o {} {} \;
           # Minify CSS
           find assets/css -name "*.css" -exec sh -c 'npx cleancss -o "$0" "$0"' {} \;
           # Minify JS
@@ -59,6 +59,7 @@ jobs:
             --exclude ".git/*" --exclude "node_modules/*" \
             --exclude "resume/*" --exclude "*.py" \
             --exclude "assets/*" --exclude "images/*" \
+            --exclude "archive/*" --exclude "draw.io/*" \
             --cache-control "public, max-age=0, must-revalidate"
 
   invalidate-cloudfront-distribution:

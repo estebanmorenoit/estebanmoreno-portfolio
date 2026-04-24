@@ -1,3 +1,5 @@
+data "aws_caller_identity" "current" {}
+
 # IAM Role for Lambda function
 resource "aws_iam_role" "lambda_role" {
   name = "terraform_lambda_func_Role"
@@ -15,6 +17,10 @@ resource "aws_iam_role" "lambda_role" {
         }
       ]
   })
+
+  tags = {
+    Name = "Cloud Resume Challenge"
+  }
 }
 
 # IAM Policy for Lambda function
@@ -22,6 +28,11 @@ resource "aws_iam_policy" "iam_policy_for_lambda" {
   name        = "aws_iam_policy_for_terraform_lambda_func_role"
   path        = "/"
   description = "AWS IAM Policy for managing aws lambda role"
+
+  tags = {
+    Name = "Cloud Resume Challenge"
+  }
+
   policy = jsonencode(
     {
       "Version" : "2012-10-17",
@@ -42,7 +53,7 @@ resource "aws_iam_policy" "iam_policy_for_lambda" {
             "dynamodb:GetItem",
             "dynamodb:PutItem"
           ],
-          "Resource" : "arn:aws:dynamodb:eu-west-2:974262444728:table/visitor_count_ddb"
+          "Resource" : "arn:aws:dynamodb:eu-west-2:${data.aws_caller_identity.current.account_id}:table/visitor_count_ddb"
         },
       ]
   })

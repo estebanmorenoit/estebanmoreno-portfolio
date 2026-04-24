@@ -23,6 +23,12 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v4 # Set up Terraform CLI
 
+      - name: Lint Lambda Python
+        working-directory: infra/lambda
+        run: |
+          pip install flake8 --quiet
+          flake8 lambda_function.py --max-line-length=120
+
       - name: Terraform Init
         id: init
         run: terraform init # Initialize the Terraform working directory
