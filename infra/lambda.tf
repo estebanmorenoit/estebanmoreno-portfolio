@@ -5,6 +5,12 @@ data "archive_file" "zip_the_python_code" {
   output_path = "${path.module}/lambda/lambda_function.zip"
 }
 
+# Import the log group Lambda auto-created before it was managed by Terraform
+import {
+  to = aws_cloudwatch_log_group.lambda
+  id = "/aws/lambda/terraform_lambda_func"
+}
+
 # CloudWatch Log Group for Lambda (controls retention; prevents unbounded log growth)
 resource "aws_cloudwatch_log_group" "lambda" {
   name              = "/aws/lambda/terraform_lambda_func"
