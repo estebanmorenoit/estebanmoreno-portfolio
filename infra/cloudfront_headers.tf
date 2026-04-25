@@ -37,7 +37,7 @@ resource "aws_cloudfront_response_headers_policy" "security_headers" {
       override        = true
     }
 
-    # Cross-Origin-Opener-Policy: isolates the browsing context
+    # Restricts what scripts, styles, fonts and connections are allowed
     content_security_policy {
       content_security_policy = join("; ", [
         "default-src 'self'",
@@ -50,6 +50,17 @@ resource "aws_cloudfront_response_headers_policy" "security_headers" {
         "base-uri 'self'",
         "form-action 'self' https://formspree.io"
       ])
+      override = true
+    }
+  }
+
+  # Cross-Origin-Opener-Policy: isolates the browsing context from popups,
+  # required by Lighthouse Trust & Safety audit. Not available in
+  # security_headers_config so set via custom_headers_config.
+  custom_headers_config {
+    items {
+      header   = "Cross-Origin-Opener-Policy"
+      value    = "same-origin"
       override = true
     }
   }
