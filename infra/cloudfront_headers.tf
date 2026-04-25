@@ -45,7 +45,7 @@ resource "aws_cloudfront_response_headers_policy" "security_headers" {
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
         "font-src 'self' https://fonts.gstatic.com",
         "img-src 'self' data: https:",
-        "connect-src 'self' https://qfky693v2f.execute-api.eu-west-2.amazonaws.com https://gql.hashnode.com https://formspree.io https://www.google-analytics.com",
+        "connect-src 'self' https://qfky693v2f.execute-api.eu-west-2.amazonaws.com https://gql.hashnode.com https://formspree.io https://www.google-analytics.com https://region1.google-analytics.com",
         "frame-ancestors 'none'",
         "base-uri 'self'",
         "form-action 'self' https://formspree.io"
