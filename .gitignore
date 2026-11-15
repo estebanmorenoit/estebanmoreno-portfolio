@@ -6,3 +6,6 @@ infra/terraform.tfstate.backup
 infra/.terraform.lock.hcl
 infra/.terraform/
 .vscode/settings.json
+linkedin-update.md
+linkedin-current.md
+linkedin-top-card.png

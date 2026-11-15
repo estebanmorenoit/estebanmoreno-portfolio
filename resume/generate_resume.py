@@ -16,83 +16,100 @@ DOCX_OUT   = RESUME_DIR / "EstebanMorenoResume.docx"
 # ── Content ────────────────────────────────────────────────────────────────────
 
 NAME    = "Esteban Moreno"
-TITLE   = "Senior DevOps Engineer"
+TITLE   = "DevOps Team Lead"
 
 CONTACT_LINE_1 = "morenoramirezesteban@gmail.com  |  linkedin.com/in/estebanmorenoramirez  |  github.com/estebanmorenoit"
-CONTACT_LINE_2 = "blog.estebanmoreno.link  |  estebanmoreno.link  |  Remote / EU-based"
+CONTACT_LINE_2 = "blog.estebanmoreno.link  |  estebanmoreno.link  |  London, UK"
 
 PROFILE = (
-    "Senior DevOps Engineer with 3+ years of experience designing and operating cloud-native "
-    "infrastructure on AWS. Specialising in Kubernetes platform engineering, GitOps-driven CI/CD, "
-    "Terraform infrastructure-as-code, and production observability. Currently building and scaling "
-    "EKS-based platforms at X-Tention. AWS Certified Solutions Architect \u2014 Associate. "
-    "Published 108+ technical articles on AWS and DevOps. "
-    "Open to remote or EU-based opportunities."
+    "DevOps Team Lead at X-Tention, responsible for the architecture and technical planning of the "
+    "Kubernetes platform behind MACH, a healthcare integration platform, on AWS EKS and "
+    "on-premises in customer environments. "
+    "Specialising in Kubernetes platform engineering, GitOps delivery with Argo CD, Terraform "
+    "infrastructure as code and production observability. Came up through IT support and network "
+    "infrastructure at Amazon and chapmanbdsp. Published 108 technical posts on AWS and DevOps, "
+    "including a 90-day DevOps series."
 )
 
 # Skills: (category, value) — rendered as "Category: value" inline
 SKILLS = [
     ("Cloud",                  "AWS \u2014 EKS, Lambda, EC2, S3, DynamoDB, CloudFront, CloudWatch, IAM, VPC, Route\u00a053"),
-    ("Infrastructure as Code", "Terraform, Terraform Cloud, HCL, Ansible"),
-    ("Containers & Kubernetes","Kubernetes, Docker, Helm, ArgoCD, k3s, microk8s, Tanzu, Zarf, Docker Compose"),
-    ("CI/CD",                  "GitLab CI/CD, GitHub Actions, ArgoCD (GitOps), Jenkins"),
-    ("Observability",          "Prometheus, Grafana, Thanos, Loki, Promtail, Fluent Bit, Alertmanager, OpenTelemetry, OpenSearch"),
-    ("Security & Identity",    "Keycloak (OIDC/SSO), AWS IAM, SAST, secret detection in pipelines"),
-    ("OS & Scripting",         "Linux (RHEL, Ubuntu, Debian), Bash"),
+    ("Infrastructure as Code", "Terraform, Terraform Cloud, HCL; Ansible (lab experience)"),
+    ("Containers & Kubernetes","Kubernetes (EKS, K3s, MicroK8s), Docker, Docker Compose, Helm, Argo CD, Harbor, Traefik, CloudNativePG, Tanzu, Zarf"),
+    ("CI/CD",                  "GitLab CI/CD, GitHub Actions, Argo CD (GitOps); Jenkins (lab experience)"),
+    ("Observability",          "Prometheus, Grafana, Thanos, Loki, Tempo, Alloy, Promtail, Fluent Bit, Alertmanager, OpenTelemetry, OpenSearch"),
+    ("Security & Identity",    "Keycloak (OIDC/SSO), External Secrets Operator, cert-manager, AWS IAM"),
+    ("OS & Scripting",         "Linux (RHEL, Ubuntu, Debian), Bash, Python"),
 ]
 
+# (name, issuer, dates)
 CERTS = [
-    ("AWS Certified Solutions Architect \u2014 Associate", "Amazon Web Services"),
-    ("AWS Certified Cloud Practitioner",                   "Amazon Web Services"),
-    ("LPI Linux Essentials",                               "Linux Professional Institute"),
-    ("Terraform Beginner Bootcamp",                        "ExamPro"),
-    ("Cisco Certified Network Associate (CCNA)",           "Cisco"),
-    ("Cisco Cybersecurity Essentials",                     "Cisco"),
+    ("AWS Certified Solutions Architect \u2013 Associate", "Amazon Web Services", "2023\u20132026"),
+    ("HashiCorp Certified: Terraform Associate (003)",     "HashiCorp",           "2023\u20132025"),
+    ("Linux Professional Institute Linux Essentials",      "LPI",                 "2023"),
+    ("Network Technician Career Path",                     "Cisco",               "2023"),
+    ("Junior Cybersecurity Analyst Career Path",           "Cisco",               "2023"),
+    ("Terraform Beginner Bootcamp (Terraformer)",          "ExamPro",             "2023"),
 ]
 
-XTENTION_BULLETS = [
-    "Architect and manage production EKS clusters using Helm and ArgoCD for GitOps-driven, "
-    "declarative deployments across multiple environments.",
-    "Design and maintain GitLab CI/CD pipelines with integrated SAST, secret detection, and "
-    "compliance gates \u2014 reducing release risk while accelerating delivery velocity.",
-    "Operate a full-stack observability platform (Prometheus, Thanos, Grafana, Loki, Promtail, "
-    "Alertmanager) providing unified metrics, logs, and alerting across distributed workloads.",
-    "Deploy and maintain Keycloak as centralised identity provider, enabling OIDC-based SSO for "
-    "internal services and enforcing least-privilege access policies.",
-    "Automate cloud infrastructure provisioning with Terraform and Terraform Cloud, eliminating "
-    "manual steps and ensuring consistent, version-controlled environments.",
-    "Evaluate and operate lightweight Kubernetes distributions (k3s, microk8s) and air-gapped "
-    "tooling (Tanzu, Zarf) for varied deployment environments.",
-    "Champion infrastructure-as-code and DevOps best practices across engineering teams: code "
-    "review, runbook documentation, and on-call process improvements.",
-]
-
-AMAZON_BULLETS = [
-    "Maintained high-availability IT infrastructure for Amazon fulfilment and sort centres "
-    "operating 24/7, supporting thousands of associates per shift.",
-    "Resolved hardware, network, and software incidents under strict SLA requirements in a "
-    "high-throughput, time-critical logistics environment.",
-    "Managed configuration of network devices, Linux servers, and end-user systems across "
-    "large-scale warehouse facilities.",
-    "Collaborated with AWS cloud and engineering teams on internal tooling and infrastructure "
-    "automation initiatives.",
-    "Delivered technical onboarding and training for new IT team members, reducing ramp-up time "
-    "and improving team self-sufficiency.",
-]
-
-CHAPMANBDSP_BULLETS = [
-    "Managed the International Helpdesk Team, delivering comprehensive IT support across "
-    "6 sites in the UK and UAE.",
-    "Led migration of the entire workforce to a remote IT environment, implementing VPN, VoIP, "
-    "and Ivanti technologies \u2014 increasing remote work capability and productivity by 30%.",
-    "Established IT security policies and procedures that achieved Cyber Essentials Plus "
-    "certification, ensuring a robust and auditable security baseline.",
-]
-
-FLUID_BULLETS = [
-    "Provided 1st and 2nd line IT support, resolving hardware, software, and network incidents "
-    "across a design consultancy environment.",
-    "Maintained workstations, managed user accounts, and supported day-to-day IT operations.",
+# (job title, "Company  ·  Location  ·  Dates", bullets)
+EXPERIENCE = [
+    ("DevOps Team Lead", "X-Tention  \u00b7  UK, remote  \u00b7  Apr 2026 \u2013 Present", [
+        "Responsible for the architecture and technical planning of the Kubernetes platform behind "
+        "MACH, X-Tention's healthcare integration platform, on AWS EKS and on-premises.",
+        "Own GitOps delivery with Argo CD, Helm and GitLab CI/CD, including EKS and Argo CD "
+        "major-version upgrades.",
+        "Deliver on-premises installations of MACH Orchestra into customer environments, covering "
+        "certificate trust, registry access and installer reliability.",
+        "Set the technical direction for observability across both platforms, including Thanos "
+        "design decisions, and lead production incident response.",
+        "Migrated the platform from MicroK8s to K3s and from the Zalando Postgres operator to "
+        "CloudNativePG; now leading the move from NGINX to Traefik ingress.",
+        "Integrate Harbor with Keycloak OIDC and manage AWS infrastructure through Terraform.",
+        "Harden workloads to run as non-root under restricted security profiles.",
+    ]),
+    ("Senior DevOps Engineer", "X-Tention  \u00b7  UK, remote  \u00b7  Feb 2024 \u2013 Apr 2026", [
+        "Managed production EKS clusters with Helm and Argo CD for GitOps-driven, declarative "
+        "deployments across multiple environments.",
+        "Built and maintained GitLab CI/CD pipelines with the team, shaped to each project's "
+        "requirements: building Docker images, running tests, packaging Helm charts, publishing "
+        "to Harbor and deploying through Argo CD.",
+        "Managed the MACH observability platform: Prometheus and Alertmanager for metrics and "
+        "alerting, OpenSearch with Fluent Bit for logs, and Grafana for dashboards.",
+        "Helped deploy Thanos for long-term metrics storage, then ran it on my own.",
+        "Set up the Grafana observability stack for a second X-Tention product: Loki for logs, "
+        "Tempo for traces, and Alloy with OpenTelemetry for collection.",
+        "Helped deploy and configure Keycloak as the identity provider for the MACH product and "
+        "internal team tools, providing OIDC-based SSO, then ran its operations on my own.",
+        "Wrote, extended and maintained the Terraform code for all of our AWS infrastructure, with "
+        "state in S3, including application configuration (OpenSearch, Keycloak) and core EKS "
+        "add-ons such as Argo CD and cert-manager.",
+        "Worked daily on the MicroK8s and K3s platform behind our product's infrastructure "
+        "tooling, together with Zarf for air-gapped packaging, making improvements and changes "
+        "as needed.",
+        "Ran proofs of concept on a VMware Tanzu Kubernetes cluster, doing most of the work myself.",
+    ]),
+    ("IT Support Engineer", "Amazon  \u00b7  London  \u00b7  Mar 2022 \u2013 Feb 2024", [
+        "Provided IT support for Amazon's London offices, including the UK headquarters, and was "
+        "responsible for building infrastructure and uptime.",
+        "Supported the rollout of Amazon's global migration from commodity switches to Cisco "
+        "across the London sites.",
+        "Set up network connectivity for new areas in the AWS offices: switches, access points, "
+        "firewall updates and new line installations.",
+        "Acted as the main contact between building infrastructure and the AWS support team.",
+        "Trained new hires on AWS, Linux and the processes and company requirements of the role.",
+    ]),
+    ("Senior IT Support Engineer", "chapmanbdsp  \u00b7  London  \u00b7  Jan 2019 \u2013 Mar 2022", [
+        "Managed the international helpdesk team across 6 sites in the UK and UAE.",
+        "Led the move of the whole workforce to remote working, rolling out VPN, VoIP and Ivanti.",
+        "Led the standards and policy work behind Cyber Essentials Plus certification.",
+    ]),
+    ("1st Line IT Support Engineer", "chapmanbdsp  \u00b7  London  \u00b7  Mar 2018 \u2013 Jan 2019", []),
+    ("IT Support Engineer", "Fluid Design Ltd  \u00b7  Aug 2017 \u2013 Mar 2018", [
+        "Provided 1st and 2nd line IT support, resolving hardware, software, and network incidents "
+        "across a design consultancy environment.",
+        "Maintained workstations, managed user accounts, and supported day-to-day IT operations.",
+    ]),
 ]
 
 EDUCATION = [
@@ -107,6 +124,14 @@ EDUCATION = [
 ]
 
 PROJECTS = [
+    (
+        "DevOps Learning Lab",
+        "K3s  |  Argo CD  |  Prometheus  |  Grafana  |  External Secrets Operator  |  Python  |  Docker",
+        "Self-hosted, interactive DevOps course across 14 topics, from Linux to GitOps, security and "
+        "observability. Each lesson pairs theory with an in-browser terminal connected to a real K3s "
+        "cluster running in Docker, pre-loaded with Argo CD, Prometheus, Grafana and External Secrets Operator.",
+        "github.com/estebanmorenoit/devops-learning-lab",
+    ),
     (
         "Production-Grade Self-Hosted Home Lab on Raspberry Pi",
         "Docker Compose  |  Prometheus  |  Grafana  |  Loki  |  Tailscale  |  GitHub Actions",
@@ -126,10 +151,9 @@ PROJECTS = [
 ]
 
 WRITING = (
-    "Published 108+ technical articles on Kubernetes, Terraform, AWS, CI/CD, and observability "
-    "at blog.estebanmoreno.link \u2014 including series on the Cloud Resume Challenge and "
-    "#90DaysOfDevOps. Completed the #90DaysOfDevOps challenge with daily hands-on labs across "
-    "AWS, Linux, Docker, Kubernetes, Ansible, Jenkins, and Grafana."
+    "Published 108 technical posts on Kubernetes, Terraform, AWS, CI/CD and observability at "
+    "blog.estebanmoreno.link, including a 90-day DevOps series (#90DaysOfDevOps) and a "
+    "Cloud Resume Challenge series."
 )
 
 
@@ -224,53 +248,23 @@ def build_pdf():
 
     # Certifications ──────────────────────────────────────────────────────
     story += section("Certifications")
-    for cert_name, issuer in CERTS:
+    for cert_name, issuer, dates in CERTS:
         story.append(Paragraph(
-            f"\u2022\u00a0<b>{cert_name}</b> \u2014 <i>{issuer}</i>",
+            f"\u2022\u00a0<b>{cert_name}</b> \u2014 <i>{issuer}</i>, {dates}",
             S_BUL
         ))
 
     # Work Experience ─────────────────────────────────────────────────────
     story += section("Work Experience")
 
-    xtention_block = KeepTogether([
-        Paragraph("Senior DevOps Engineer", S_JOB),
-        Paragraph("X-Tention  \u00b7  Feb 2024 \u2013 Present", S_META),
-        bul(XTENTION_BULLETS[0]),
-        bul(XTENTION_BULLETS[1]),
-        bul(XTENTION_BULLETS[2]),
-    ])
-    xtention_rest = [bul(b) for b in XTENTION_BULLETS[3:]]
-
-    amazon_block = KeepTogether([
-        Paragraph("IT Engineer", S_JOB),
-        Paragraph("Amazon  \u00b7  Mar 2022 \u2013 Feb 2024", S_META),
-        bul(AMAZON_BULLETS[0]),
-        bul(AMAZON_BULLETS[1]),
-    ])
-    amazon_rest = [bul(b) for b in AMAZON_BULLETS[2:]]
-
-    story.append(xtention_block)
-    story += xtention_rest
-    story.append(amazon_block)
-    story += amazon_rest
-
-    chapman_block = KeepTogether([
-        Paragraph("Senior IT Engineer", S_JOB),
-        Paragraph("chapmanbdsp  \u00b7  Mar 2018 \u2013 Mar 2022", S_META),
-        bul(CHAPMANBDSP_BULLETS[0]),
-        bul(CHAPMANBDSP_BULLETS[1]),
-    ])
-    story.append(chapman_block)
-    story.append(bul(CHAPMANBDSP_BULLETS[2]))
-
-    fluid_block = KeepTogether([
-        Paragraph("IT Support Engineer", S_JOB),
-        Paragraph("Fluid Design Ltd  \u00b7  Aug 2017 \u2013 Mar 2018", S_META),
-        bul(FLUID_BULLETS[0]),
-        bul(FLUID_BULLETS[1]),
-    ])
-    story.append(fluid_block)
+    # Keep each role's heading with its first bullets so it never orphans at a page break
+    for job, meta, bullets in EXPERIENCE:
+        story.append(KeepTogether([
+            Paragraph(job, S_JOB),
+            Paragraph(meta, S_META),
+            *[bul(b) for b in bullets[:2]],
+        ]))
+        story += [bul(b) for b in bullets[2:]]
 
     # Education ───────────────────────────────────────────────────────────
     story += section("Education")
@@ -392,47 +386,21 @@ def build_docx():
 
     # Certs
     section_heading("Certifications")
-    for cert_name, issuer in CERTS:
-        bullet_item(cert_name + " \u2014 " + issuer)
+    for cert_name, issuer, dates in CERTS:
+        bullet_item(f"{cert_name} \u2014 {issuer}, {dates}")
 
     # Experience
     section_heading("Work Experience")
 
-    p = para(space_before=4, space_after=1)
-    add_run(p, "Senior DevOps Engineer", bold=True, size=10, color=DARK_RGB)
+    for i, (job, meta, bullets) in enumerate(EXPERIENCE):
+        p = para(space_before=4 if i == 0 else 6, space_after=1)
+        add_run(p, job, bold=True, size=10, color=DARK_RGB)
 
-    p = para(space_after=3)
-    add_run(p, "X-Tention  \u00b7  Feb 2024 \u2013 Present", italic=True, size=8.5, color=MUTED_RGB)
+        p = para(space_after=3)
+        add_run(p, meta, italic=True, size=8.5, color=MUTED_RGB)
 
-    for b in XTENTION_BULLETS:
-        bullet_item(b)
-
-    p = para(space_before=6, space_after=1)
-    add_run(p, "IT Engineer", bold=True, size=10, color=DARK_RGB)
-
-    p = para(space_after=3)
-    add_run(p, "Amazon  \u00b7  Mar 2022 \u2013 Feb 2024", italic=True, size=8.5, color=MUTED_RGB)
-
-    for b in AMAZON_BULLETS:
-        bullet_item(b)
-
-    p = para(space_before=6, space_after=1)
-    add_run(p, "Senior IT Engineer", bold=True, size=10, color=DARK_RGB)
-
-    p = para(space_after=3)
-    add_run(p, "chapmanbdsp  \u00b7  Mar 2018 \u2013 Mar 2022", italic=True, size=8.5, color=MUTED_RGB)
-
-    for b in CHAPMANBDSP_BULLETS:
-        bullet_item(b)
-
-    p = para(space_before=6, space_after=1)
-    add_run(p, "IT Support Engineer", bold=True, size=10, color=DARK_RGB)
-
-    p = para(space_after=3)
-    add_run(p, "Fluid Design Ltd  \u00b7  Aug 2017 \u2013 Mar 2018", italic=True, size=8.5, color=MUTED_RGB)
-
-    for b in FLUID_BULLETS:
-        bullet_item(b)
+        for b in bullets:
+            bullet_item(b)
 
     # Education
     section_heading("Education")
