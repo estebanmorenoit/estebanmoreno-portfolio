@@ -241,6 +241,18 @@ section { padding: clamp(56px, 7vw, 88px) clamp(20px, 5vw, 64px); border-top: 1p
 }
 .about-text strong { color: var(--fg); font-weight: 600; }
 
+/* ─── Experience ─── */
+.exp-list { display: flex; flex-direction: column; gap: 40px; max-width: 860px; }
+.exp-company-name { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
+.exp-meta { font-family: var(--mono); font-size: 14px; font-weight: 400; color: var(--fg3); }
+.exp-role { border-left: 2px solid var(--border); padding-left: 20px; margin-bottom: 20px; }
+.exp-role:last-child { margin-bottom: 0; }
+.exp-title { font-size: 17px; font-weight: 600; }
+.exp-dates { font-family: var(--mono); font-size: 14px; color: var(--fg3); margin: 2px 0 10px; }
+.exp-bullets { padding-left: 18px; color: var(--fg2); font-size: 16px; line-height: 1.7; }
+.exp-bullets li + li { margin-top: 6px; }
+.exp-bullets li::marker { color: var(--accent); }
+
 /* ─── Tech Stack ─── */
 .stack-groups { display: flex; flex-direction: column; gap: 24px; }
 .stack-group-label {
